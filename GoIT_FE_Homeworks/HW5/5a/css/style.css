@@ -130,7 +130,6 @@ input[placeholder]{
 input[placeholder]:focus{
   background-color: rgba(0, 120, 255, 0.5);
   box-shadow: 0 0 20px rgba(0, 120, 255, 0.8);
-  border: 0;
 }
 label {
   display: inline-block;
