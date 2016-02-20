@@ -1,0 +1,576 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida sans unicode', Arial, sans-serif;
+}
+.wrapper{
+  height: 1000px;
+  margin: 0 auto;
+  border: 1px  solid black;
+  width: 910px;
+  padding: 20px 40px;
+}
+.clearfix:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+/*header*/
+.phone-number{
+  width: 300px;
+  float: left;
+  margin-left: 0px;
+}
+.phone-number span{
+  font-family: arial;
+  font-size: 18px;
+  color: #6d767a;
+  letter-spacing: 0.5px;
+}
+.phone-number img{
+  float: left;
+  margin: 1px 2px 0 7px;
+}
+header form{
+  background: linear-gradient(to top, #0c3357, #0c3357);
+  width: 495px;
+  border-radius: 4px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  margin-left: 15px;
+  margin-top: -4px;
+  height: 27px;
+  float: left;
+  position: relative;
+}
+header form img{
+  margin: 5px 0 0 6px;
+  float: left;
+}
+header form input[placeholder]{
+  font-size: 11px;
+  width: 110px;
+  height: 13px;
+  text-indent: 3px;
+  margin-left: 3px;
+}
+header input[name="login"]{
+/*position: absolute;
+top: 5px;
+left: 24px;*/
+text-indent: 3px;
+}
+header form input[type="submit"]{
+  background: rgba(255, 0, 0, 0);
+  border: none;
+  font-size: 11px;
+  color: #fff;
+  margin-left: 2px;
+}
+.registration{
+  font-size: 11px;
+  text-decoration: none;
+  color: #fff;
+  border-left: 1px solid white;
+  padding-left: 3px;
+  letter-spacing: -0.2px;
+}
+.forgoten{
+  font-size: 12px;
+  margin-left: 16px;
+  color: #bfbfbf;
+}
+header nav {
+  border: 1px solid #c1c8cb;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  width: 77px;
+  float: left;
+  margin-left: 14px;
+  height: 17px;
+}
+header nav a{
+  padding-left: 9px;
+  display: block;
+  height: 10px;
+  float: left;
+}
+header nav a img{
+  float: left;
+  margin-top: 20%;
+}
+header nav a:last-child img{
+  margin-top: 31%;
+}
+/*end of header*/
+.logo{
+  display: block;
+  max-height: 240px;
+  max-width: 910px;
+  width: 100%;
+  margin: 10px 0 5px 0;
+}
+/*nav menu*/
+.wrapper>nav{
+  height: 33px;
+  background: linear-gradient(to top, #010101, #4d5663);
+  border: 1px solid #2c345a;
+  border-radius: 5px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+}
+.wrapper>nav ul{
+  list-style: none;
+  margin-left: 125px;
+}
+.wrapper>nav li{
+  float: left;
+  text-transform: uppercase;
+  margin-top: 2px;
+  padding: 2px 11px 2px 15px;
+}
+.wrapper>nav li:nth-child(2) {
+  padding: 2px 15px 2px 21px;
+}
+.wrapper>nav li:nth-child(3) {
+  padding: 2px 14px 2px 14px;
+}
+.wrapper>nav li:nth-child(4) {
+  padding: 2px 14px 2px 14px;
+}
+.wrapper>nav li:nth-child(5) {
+  padding: 2px 14px 2px 11px;
+}
+.wrapper>nav a{
+  font-size: 14px;
+  text-decoration: none;
+  color: #b1bcc0;
+}
+.wrapper>nav .active {
+  background: linear-gradient(to top, #0c3357, #1f6787);
+  border-radius: 15px;
+}
+.basket {
+  width: 226px;
+  float: right;
+  margin-top: 6px;
+}
+.basket span{
+  float: left;
+  display: block;
+  font-family: arial;
+  font-size: 11px;
+  margin-top: 3px;
+  }
+.basket img{
+  float: left;
+  display: block;
+}
+.basket .goods{
+  margin-left: 8px;
+}
+.basket .quantity{
+  margin-left: 4px;
+  font-size: 12px;
+  color: #0d5a8f;
+}
+.basket .summ{
+  margin-left: 15px;
+}
+.basket .price{
+  width: 37px;
+  text-align: right;
+  font-size: 12px;
+  color: #0d5a8f;
+}
+.basket .uah{
+  margin-left: 6px;
+  font-size: 12px;
+  color: #0d5a8f;
+}
+/*end of menu*/
+/*poisk*/
+/*по авто*/
+.find{
+  margin-top: 10px;
+}
+.find .auto {
+  font-family: Arial;
+  float: left;
+  height: 134px;
+  width: 413px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+  margin-left: 4px;
+  position: relative;
+}
+.find .auto>span {
+  display: block;
+  font-size: 10px;
+  line-height: 9px;
+  letter-spacing: -0.05px;
+  /*position: absolute;*/
+}
+.find .auto>span>span {
+  font-size: 9px;
+  color: gray;
+}
+.find .auto .head {
+  font-family: arial;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #154467;
+  position: absolute;
+  top: 3px;
+  left: 124px;
+}
+.find .auto .disc {
+  font-family: arial;
+  font-weight: 900;
+  font-size: 10px;
+  color: #154467;
+  position: absolute;
+  top: 5px;
+  left: 21px;
+}
+.find .auto .tire {
+  font-family: arial;
+  font-weight: 900;
+  font-size: 10px;
+  color: #154467;
+  position: absolute;
+  top: 3px;
+  left: 355px;
+}
+/*позиционирование эл-тов*/
+.find .auto .mad {
+  position: absolute;
+  top: 27px;
+  left: 18px;
+}
+.find .auto .mod {
+  position: absolute;
+  top: 43px;
+  left: 18px;
+}
+.find .auto .yd {
+  position: absolute;
+  top: 65px;
+  left: 18px;
+}
+.find .auto .cd {
+  position: absolute;
+  top: 91px;
+  left: 17px;
+}
+.find .auto .mat {
+  position: absolute;
+  top: 25px;
+  left: 222px;
+}
+.find .auto .mot {
+  position: absolute;
+  top: 41px;
+  left: 222px;
+}
+.find .auto .yt {
+  position: absolute;
+  top: 63px;
+  left: 222px;
+}
+.find .auto .ct {
+  position: absolute;
+  top: 89px;
+  left: 222px;
+}
+.find .auto select {
+  font-size: 10px;
+}
+.find .auto select[name="mark-disc"] {
+  position: absolute;
+  top: 21px;
+  left: 93px;
+  height: 18px;
+  width: 102px;
+}
+.find .auto select[name="model-disc"] {
+  position: absolute;
+  top: 43px;
+  left: 93px;
+  height: 18px;
+  width: 102px;
+}
+.find .auto select[name="year-disc"] {
+  position: absolute;
+  top: 65px;
+  left: 93px;
+  height: 18px;
+  width: 59px;
+}
+.find .auto select[name="complect-disc"] {
+  position: absolute;
+  top: 87px;
+  left: 93px;
+  height: 18px;
+  width: 102px;
+}
+.find .auto select[name="mark-tire"] {
+  position: absolute;
+  top: 19px;
+  left: 298px;
+  height: 18px;
+  width: 102px;
+}
+.find .auto select[name="model-tire"] {
+  position: absolute;
+  top: 41px;
+  left: 298px;
+  height: 18px;
+  width: 102px;
+}
+.find .auto select[name="year-tire"] {
+  position: absolute;
+  top: 63px;
+  left: 298px;
+  height: 18px;
+  width: 58px;
+}
+.find .auto select[name="complect-tire"] {
+  position: absolute;
+  top: 85px;
+  left: 299px;
+  height: 18px;
+  width: 102px;
+}
+.find .auto input[type="submit"] {
+  position: absolute;
+  top: 106px;
+  left: 341px;
+  background: rgba(255, 0, 0, 0);
+  border: none;
+  text-decoration: underline;
+  font-style: italic;
+  color: #154467;
+}
+/*по шинам*/
+.find .tires {
+  float: left;
+  height: 134px;
+  width: 191px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+  margin-left: 14px;
+  position: relative;
+}
+.find .tires .head {
+  color: #154467;
+  font-family: arial;
+  text-transform: lowercase;
+  font-size: 12px;
+  font-weight: 900;
+  position: absolute;
+  top: -1px;
+  left: 10px;
+}
+.find .tires .size {
+  font-size: 10px;
+  position: absolute;
+  top: 26px;
+  left: 13px;
+}
+.find .tires .r {
+  font-size: 11px;
+  position: absolute;
+  top: 47px;
+  left: 46px;
+}
+.find .tires .season {
+  font-size: 10px;
+  position: absolute;
+  top: 65px;
+  left: 14px;
+}
+.find .tires .slash {
+  font-size: 14px;
+  position: absolute;
+  top: 21px;
+  left: 113px;
+}
+.find .tires input[type="submit"] {
+  position: absolute;
+  top: 106px;
+  left: 121px;
+  background: rgba(255, 0, 0, 0);
+  border: none;
+  text-decoration: underline;
+  font-style: italic;
+  color: #154467;
+}
+.find .tires select {
+  font-size: 10px;
+}
+.find .tires select[name="long"] {
+  position: absolute;
+  top: 22px;
+  left: 59px;
+  height: 18px;
+  width: 50px;
+}
+.find .tires select[name="width"] {
+  position: absolute;
+  top: 22px;
+  left: 125px;
+  height: 18px;
+  width: 51px;
+}
+.find .tires select[name="R"] {
+  position: absolute;
+  top: 46px;
+  left: 59px;
+  height: 18px;
+  width: 45px;
+}
+.find .tires label {
+  font-size: 12px;
+  display: block;
+  position: relative;
+  top: 69px;
+  left: 58px;
+  line-height: 14px;
+}
+.find .tires input[type="checkbox"] {
+  float: left;
+  position: relative;
+  top: 70px;
+  left: 58px;
+}
+/*поиск шин*/
+.find form[class="disc"] {
+  float: left;
+  height: 134px;
+  width: 267px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+  margin-left: 9px;
+  position: relative;
+}
+.find form[class="disc"] span {
+  display: block;
+  font-size: 10px;
+  line-height: 10px;
+  letter-spacing: -0.05px;
+}
+.find form[class="disc"] span>span {
+  font-size: 9px;
+  color: gray;
+}
+.find form[class="disc"] .head {
+  color: #154467;
+  font-family: arial;
+  text-transform: lowercase;
+  font-size: 12px;
+  font-weight: 900;
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  letter-spacing: 0.9px;
+}
+.find form[class="disc"] .diametr {
+  display: inline;
+  position: absolute;
+  top: 25px;
+  left: 16px;
+  letter-spacing: 0.9px;
+}
+.find form[class="disc"] .diametr>span {
+  display: inline;
+}
+.find form[class="disc"] .quantity {
+  position: absolute;
+  left: 17px;
+  letter-spacing: 0.7px;
+  top: 40px;
+}
+.find form[class="disc"] .DRKO {
+  position: absolute;
+  top: 71px;
+  left: 17px;
+  letter-spacing: 0.7px;
+}
+.find form[class="disc"] .DCO {
+  position: absolute;
+  top: 5px;
+  left: 187px;
+  line-height: 7px;
+}
+.find form[class="disc"] .DCO>span {
+font-size: 8px;
+}
+.find form[class="disc"] .ET {
+  position: absolute;
+  top: 66px;
+  left: 187px;
+}
+.find form[class="disc"] .ET>span {
+font-size: 8px;
+}
+.find form[class="disc"] select[name="diametr"] {
+  font-size: 9px;
+  height: 17px;
+  width: 57px;
+  position: absolute;
+  top: 20px;
+  left: 107px;
+}
+.find form[class="disc"] select[name="diametr"] {
+  font-size: 9px;
+  height: 17px;
+  width: 57px;
+  position: absolute;
+  top: 20px;
+  left: 107px;
+}
+.find form[class="disc"] select[name="quantity"] {
+  font-size: 9px;
+  height: 17px;
+  width: 57px;
+  position: absolute;
+  top: 52px;
+  left: 107px;
+}
+.find form[class="disc"] select[name="DRKO"] {
+  font-size: 9px;
+  height: 17px;
+  width: 57px;
+  position: absolute;
+  top: 83px;
+  left: 107px;
+}
+.find form[class="disc"] select[name="DCO"] {
+  font-size: 9px;
+  height: 17px;
+  width: 57px;
+  position: absolute;
+  top: 42px;
+  left: 189px;
+}
+.find form[class="disc"] select[name="ET"] {
+  font-size: 9px;
+  height: 17px;
+  width: 57px;
+  position: absolute;
+  top: 87px;
+  left: 188px;
+}
+.find form[class="disc"] input[type="submit"] {
+  position: absolute;
+  top: 106px;
+  left: 197px;
+  background: rgba(255, 0, 0, 0);
+  border: none;
+  text-decoration: underline;
+  font-style: italic;
+  color: #154467;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Zazor</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="clearfix">
+      <div class="phone-number">
+        <img src="img/phone.png" alt="phone">
+        <span>(044)123-45-67 (044)567-89-10</span>
+      </div>
+      <form action="#" class="login" method="post">
+      <img src="img/autorization.png" alt="body">
+      <input type="text" name="login" id="login" placeholder="логин">
+      <input type="password" name="password" id="password" placeholder="пароль">
+      <input type="submit" value="вход">
+      <a class="registration" href="#">регистрация</a>
+      <a class="forgoten" href="#">забыли пароль?</a>
+      </form>
+      <nav>
+        <a href=""><img src="img/home.png" alt="home"></a>
+        <a href=""><img src="img/map.png" alt="map"></a>
+        <a href=""><img src="img/letter.png" alt="letter"></a>
+      </nav>
+    </header>
+    <img src="img/logo.png" alt="logo" class="logo">
+    <nav class="clearfix">
+      <ul>
+        <li class="active"><a href="#">О компании</a></li>
+        <li><a href="#">Оплата</a></li>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Статьи</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+      <div class="basket">
+        <a href="#"><img src="img/basket.png" alt="basket">
+        <span class="goods">товаров:</span>
+        <span class="quantity">0</span>
+        <span class="summ">на сумму:</span>
+        <span class="price">0,00</span>
+        <span class="uah">грн.</span>
+        </a>
+      </div>
+    </nav>
+    <section class="find clearfix">
+      <form action="#" class="auto">
+        <span class="head">Поиск по автомобилю</span>
+        <span class="disc">Диски:</span>
+        <span class="tire">Шины:</span>
+        <span class="mad">Марка <span>авто:</span></span>
+        <span class="mod">Модель<br><span>автомобиля:</span></span>
+        <span class="yd">Год выпуска<br><span>автомобиля:</span></span>
+        <span class="cd">Комплектация:</span>
+        <span class="mat">Марка <span>авто:</span></span>
+        <span class="mot">Модель<br><span>автомобиля:</span></span>
+        <span class="yt">Год выпуска<br><span>автомобиля:</span></span>
+        <span class="ct">Комплектация:</span>
+        <select name="mark-disc" id="mark-disc">
+          <option value="">option 1</option>
+          <option value="">option 2</option>
+          <option value="">option 3</option>
+        </select>
+        <select name="model-disc" id="model-disc">
+          <option value="">option 1</option>
+          <option value="">option 2</option>
+          <option value="">option 3</option>
+        </select>
+        <select name="year-disc" id="year-disc">
+          <option value="">option 1</option>
+          <option value="">option 2</option>
+          <option value="">option 3</option>
+        </select>
+        <select name="complect-disc" id="complect-disc">
+          <option value="">option 1</option>
+          <option value="">option 2</option>
+          <option value="">option 3</option>
+        </select>
+        <select name="mark-tire" id="mark-tire">
+          <option value="">option 1</option>
+          <option value="">option 2</option>
+          <option value="">option 3</option>
+        </select>
+        <select name="model-tire" id="model-tire">
+          <option value="">option 1</option>
+          <option value="">option 2</option>
+          <option value="">option 3</option>
+        </select>
+        <select name="year-tire" id="year-tire">
+          <option value="">option 1</option>
+          <option value="">option 2</option>
+          <option value="">option 3</option>
+        </select>
+        <select name="complect-tire" id="complect-tire">
+          <option value="">option 1</option>
+          <option value="">option 2</option>
+          <option value="">option 3</option>
+        </select>
+        <input type="submit" value="поиск...">
+      </form>
+      <form action="#" class="tires">
+        <span class="head">поиск шин</span>
+        <span class="size">Размер:</span>
+        <span class="r">R</span>
+        <span class="season">Сезон:</span>
+        <span class="slash">/</span>
+        <select name="long" id="">
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <select name="width" id="">
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <select name="R" id="">
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <div class="checkbox">
+          <input type="checkbox" name="" id="summer">
+          <label for="summer">лето</label>
+          <input type="checkbox" name="" id="winter">
+          <label for="winter">зима</label>
+          <input type="checkbox" name="" id="year">
+          <label for="year">всесезон</label>
+        </div>
+          <input type="submit" value="поиск...">
+      </form>
+      <form action="#" class="disc">
+        <span class="head">поиск дисков</span>
+        <span class="diametr">Диаметр <span>диска:</span></span>
+        <span class="quantity">Количество<span>крепёжных<br>отверстий:</span></span>
+        <span class="DRKO">Диаметр<br><span>расположеиня<br>крепежных<br>отверстий</span></span>
+        <span class="DCO">ДЦО<br><span>(диаметр<br>центрального<br>отверстия):</span></span>
+        <span class="ET">ЕТ<br><span>(вылет диска):</span></span>
+        <select name="diametr" id="">
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <select name="quantity" id="">
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <select name="DRKO" id="">
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <select name="DCO" id="">
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <select name="ET" id="">
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <input type="submit" value="поиск...">
+      </form>
+    </section>
+  </div>
+</body>
+</html>
