@@ -4,11 +4,9 @@
   font-family: 'Lucida sans unicode', Arial, sans-serif;
 }
 .wrapper{
-  height: 1000px;
   margin: 0 auto;
-  border: 1px  solid black;
   width: 910px;
-  padding: 20px 40px;
+  padding: 20px 40px 0;
 }
 .clearfix:after{
   content: "";
@@ -98,7 +96,7 @@ header nav a img{
   float: left;
   margin-top: 20%;
 }
-header nav a:last-child img{
+header nav a :last-child {
   margin-top: 31%;
 }
 /*end of header*/
@@ -438,6 +436,7 @@ header nav a:last-child img{
   top: 69px;
   left: 58px;
   line-height: 14px;
+  width: 80px;
 }
 .find .tires input[type="checkbox"] {
   float: left;
@@ -606,7 +605,7 @@ main .tires, main .discs, main .bolt {
   border: 1px solid gray;
   border-radius: 20px;
   height: 25px;
-  width: 150px;
+  width: 149px;
 }
 main .tires img, main .discs img, main .bolt img {
   float: left;
@@ -623,10 +622,12 @@ main .tires a, main .discs a, main .bolt a {
 }
 main .left ul {
   list-style-image: url("../img/list-style-image.png");
+  margin-left: 51px;
 }
 main .left li a {
   color: #465961;
   font-size: 13px;
+  margin-left: -5px;
   text-decoration: none;
 }
 main .left .active a {
@@ -639,4 +640,166 @@ main .left .active a {
 }
 main .left .tires {
   margin-top: 15px;
+}
+/*goods*/
+main .goods {
+  background: linear-gradient(to top, #93a7b0, #e5e7e8);
+  border-radius: 2px;
+  float: left;
+  margin-left: 8px;
+  padding-bottom: 15px;
+  width: 526px;
+}
+main .goods figure {
+  float: left;
+  margin: 13px 6px 12px 24px;
+}
+main .goods figure .firm {
+  color: #206988;
+  display: block;
+  font-size: 15px;
+  line-height: 17px;
+  text-align: center;
+}
+main .goods figure .title {
+  display: block;
+  font-size: 13px;
+  line-height: 11px;
+  text-align: center;
+}
+main .goods figcaption {
+  color: #114165;
+  font-family: arial;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+  margin: 3px 0 0 4px;
+  text-align: center;
+}
+main .goods figure .uah {
+  font-family: Arial;
+  font-size: 12px;
+}
+main .goods figure a {
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: #fff;
+  display: block;
+  height: 127px;
+  width: 136px;
+}
+main .goods figure a img {
+  display: block;
+  margin: 5px auto 0;
+  max-height: 127px;
+  max-width: 136px;
+}
+/*right sidebar*/
+main .right{
+  float: right;
+  width: 182px;
+}
+.right .brand {
+  border: 1px solid gray;
+  border-radius: 20px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+  height: 25px;
+  margin: -2px 0px 3px -2px;
+  width: 180px;
+}
+.right .brand img {
+  float: left;
+  margin-top: 1px;
+  margin-left: 3px;
+}
+.right .brand a {
+  color: #114165;
+  font-size: 13px;
+  margin: auto 0 auto 4px;
+  letter-spacing: 1.1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.right form {
+  margin: 15px 0px 0 13px;
+}
+.right .tires {
+  width: 134px;
+}
+.right .discs {
+  margin: 12px 0 0 -1px;
+  width: 134px;
+}
+.right form input[type="checkbox"] {
+  float: left;
+  margin: 4px 0 0 0;
+}
+.right form label {
+  color: #465961;
+  display: block;
+  font-size: 13px;
+  line-height: 23px;
+  margin-left: 25px;
+}
+.right .chbgroop1 {
+  margin: 6px 0px 0 9px;
+}
+.right .chbgroop2 {
+  margin: 9px 0 0 10px;
+}
+.right input[type="submit"] {
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to top, #0d3458, #1f6787);
+  color: #fff;
+  font-size: 11px;
+  height: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 17px 0 0 10px;
+  width: 80px;
+}
+section[class="brands clearfix"] {
+  margin: 42px 0 0 107px;
+}
+section[class="brands clearfix"] img {
+  margin: 0px 4px 0 9px;
+  float: left;
+}
+/*footer*/
+footer {
+  background-color: #213a4d;
+  border-radius: 2px;
+  margin: 22px 0 0 0;
+  padding: 0px 0 45px 0;
+  text-align: center;
+}
+footer ul {
+  list-style: none;
+  margin: 0px 0px 5px 300px;
+}
+footer ul li {
+  border-right: 2px solid gray;
+  font-family: arial;
+  font-size: 12px;
+  float: left;
+  margin: 11px 0px 0px 0px;
+  padding: 0px 12px 0 12px;
+}
+footer ul li a {
+font-family: arial;
+text-decoration: none;
+color: #bec6c9;
+}
+footer ul .active a {
+  font-family: arial;
+  color: #52abcb;
+}
+footer ul :last-child {
+  border: none;
+}
+footer span {
+  color: #7f4740;
+  font-family: arial;
+  font-size: 10px;
 }
