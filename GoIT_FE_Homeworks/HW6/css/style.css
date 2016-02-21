@@ -574,3 +574,69 @@ font-size: 8px;
   font-style: italic;
   color: #154467;
 }
+/*main*/
+/*left sidebar*/
+main {
+  margin-top: 17px;
+}
+main .left {
+  float: left;
+}
+.left .catalogue {
+  border: 1px solid gray;
+  border-radius: 20px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+  height: 25px;
+  width: 180px;
+}
+.left .catalogue img {
+  float: left;
+  margin-top: 1px;
+  margin-left: 3px;
+}
+.left .catalogue a {
+  color: #114165;
+  font-size: 13px;
+  margin: auto 0 auto 2px;
+  letter-spacing: -0.3px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+main .tires, main .discs, main .bolt {
+  border: 1px solid gray;
+  border-radius: 20px;
+  height: 25px;
+  width: 150px;
+}
+main .tires img, main .discs img, main .bolt img {
+  float: left;
+  margin-top: 1px;
+  margin-left: 5px;
+}
+main .tires a, main .discs a, main .bolt a {
+  color: #114165;
+  font-size: 13px;
+  margin: auto 0 auto 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+main .left ul {
+  list-style-image: url("../img/list-style-image.png");
+}
+main .left li a {
+  color: #465961;
+  font-size: 13px;
+  text-decoration: none;
+}
+main .left .active a {
+  color: #0c3256;
+  font-family: arial;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
+}
+main .left .tires {
+  margin-top: 15px;
+}
