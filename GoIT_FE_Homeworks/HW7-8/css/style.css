@@ -234,9 +234,9 @@ input#news-4:checked ~ .news__nav-dots label#news-dot-4 {
 }
 .news__video {
   float: right;
-  margin-right: 16.25%;
-  margin-top: -5%;
-  width: 30%;
+  margin-top: -2%;
+  width: 35%;
+  margin-right: 3.25%;
 }
 .news__video video {
   display: block;
@@ -279,7 +279,7 @@ input#news-4:checked ~ .news__nav-dots label#news-dot-4 {
   font-family: "LeagueGothic";
   font-weight: 300;
   font-size: 20px;
-  margin: 19px 19px 0 0;
+  margin: -5px 19px 0 0;
   letter-spacing: -0.5px;
 }
 .about__container {
@@ -673,6 +673,12 @@ footer {
   word-wrap: break-word;
   max-height: 200px
   overflow: hidden;
+}
+.news__video {
+  float: right;
+  margin-right: 16.25%;
+  margin-top: -5%;
+  width: 30%;
 }
 .news__nav .prev {
   font-size: 75px;
