@@ -9,8 +9,8 @@
   clear: both;
 }
 .wrapper {
-  border-left: 2px solid black;
-  border-right: 2px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
   max-width: 960px;
   margin: 0 auto;
   position: relative;
@@ -92,15 +92,22 @@ header {
   color: transparent;
   text-shadow: none;
 }
-.main {
+header .main {
   float: right;
   margin-top: 10px;
-  width: 75%;
-  margin-right: -38px;
+  position: absolute;
+  width: 66.2%;
+  right: 0;
+}
+header .main :first-child {
+margin-left: 0;
+}
+.main :last-child {
+  margin-right: 0;
 }
 .main__item {
   padding: 0 0px 5px 5px;
-  margin: 0 0px 0 6.5%;
+  margin: 0px 0% 0 7.3%;
   float: left;
   list-style: none;
 }
@@ -159,8 +166,16 @@ header {
 
 .news__nav label:hover { opacity: 1; }
 
-.news__nav .prev { left: -15%; }
-.news__nav .next { right: -15%; }
+.news__nav .prev {
+  right: 80vw;
+  max-width: 52px;
+  text-align: right;
+ }
+.news__nav .next {
+  left: 80vw;
+  max-width: 52px;
+  text-align: left;
+}
 
 input:checked + .news__container  .news__slide {
     opacity: 1;
@@ -599,6 +614,7 @@ footer {
   height: 114px;
 }
 footer .main {
+  width: 75%;
   margin-top: 43px;
   float: left;
 }
@@ -622,23 +638,35 @@ footer .main {
 .designed span {
   font-weight: 800;
 }
+@media (max-width: 1190px){
+  .wrapper {
+    overflow: hidden;
+  }
+  .news__nav {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
 .bg__news {
-  top: 244px;
+  top: 246px;
+}
+header {
+height: 739px;
 }
 .bg__header {
-  height: 797px;
+  height: 799px;
 }
 .bg__footer {
   height: 201px;
 }
 footer {
-  height: 203px;
+  height: 200px;
 }
 .logo {
   margin-left: 16px;
 }
-.main {
+header .main {
+  position: static;
   clear: left;
   float: left;
   width: 100%;
@@ -668,6 +696,7 @@ footer {
 .news__slide {
   left: 5%;
   top: 10px;
+  max-width: 95%;
 }
 .news__text {
   margin-top: 82px;
@@ -683,6 +712,7 @@ footer {
   width: 30%;
 }
 .news__nav .prev {
+  display: block;
   font-size: 75px;
   top: 4px;
   left: -3.5%;
@@ -691,19 +721,24 @@ footer {
   font-size: 75px;
   top: 4px;
   right: -3.5%;
+  display: block;
 }
 .news__nav-dots {
   bottom: -54px;
   left: 70.1%;
 }
 .about {
-  padding-top: 33px;
+  padding-top: 82px;
+  height: 260px;
 }
 .about__readmore {
-  margin: 0px 30px 0 0;
+  margin: 2px 30px 0 0;
 }
 .about__h1 {
   font-size: 24px;
+}
+.about__text {
+  margin: 7px 0 0 53px;
 }
 .about__container {
 margin: 0px 0 0 29px;
@@ -716,7 +751,7 @@ margin: 0 0 0 21px;
 }
 main {
   height: 475px;
-  padding: 105px 0 0 0;
+  padding: 133px 0 0 0;
 }
 .pingbuller__slide {
     left: 2.5%;
@@ -752,6 +787,9 @@ main {
 .logotips div {
   margin: 29px 4.20% 0px 3%;
 }
+.logotips :last-child{
+  margin-right: 0;
+}
 .ncat {
   padding-top: 90px;
   height: 306px;
@@ -781,17 +819,17 @@ main {
   overflow: hidden;
 }
 .ncat__recent {
-  margin: 11px 0px 0 4.3%;
+  margin: 9px 0px 0 5%;
   max-height: 205px;
 }
 .ncat__categories {
-  margin: 10px 0 0 0;
+  margin: 10px -4px 0 0px;
   max-height: 205px;
 }
 footer .main {
-  margin-top: 47px;
+  max-width: 90%;
+  margin: 45px 0 0 17px;
   float: left;
-  margin-left: 17px;
 }
 .main__foot {
   float: left;
@@ -803,7 +841,7 @@ footer .main {
   font-size: 20px;
 }
 .designed {
-  margin: 32px 23px 0 0;
+  margin: 32px 19px 0 0;
 }
 }
 @media (max-width: 480px) {
@@ -920,9 +958,10 @@ header .main>:last-child:hover {
 }
 .news__nav .next {
   font-size: 68px;
+  max-width: 35px;
   font-weight: 800;
   top: -57px;
-  right: -2.5%;
+  right: 0;
 }
 .news__nav-dots {
   bottom: 101px;
@@ -1056,8 +1095,8 @@ footer .main {
 position: static;
 margin-top: 39px;
 margin-bottom: 32px;
+margin-left: 0;
 width: 100%;
-left: 0;
 }
 .main__foot {
   margin: 0px 3px 0 4.5%;
