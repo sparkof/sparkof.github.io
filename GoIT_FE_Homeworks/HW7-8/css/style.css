@@ -167,14 +167,14 @@ margin-left: 0;
 .news__nav label:hover { opacity: 1; }
 
 .news__nav .prev {
-  right: 68vw;
+  right: 80vw;
   max-width: 52px;
   text-align: right;
  }
 .news__nav .next {
   max-width: 52px;
   text-align: left;
-  left: 67vw;
+  left: 80vw;
 }
 
 input:checked + .news__container  .news__slide {
