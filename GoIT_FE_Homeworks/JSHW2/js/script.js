@@ -11,10 +11,15 @@ var questionnaire = {
     document.body.appendChild(questionWrapper);
   },
   header: function(a) {
+    if ( document.getElementsByClassName('q-header').length == 0 ) {
     title = document.createElement('div');
     title.classList.add('q-header');
     title.innerHTML = a;
     questionWrapper.appendChild(title);
+    } else {
+    title = document.getElementsByClassName('q-header');
+    title[0].innerHTML = a;
+    }
   },
   question: function() {
     checkForm();
