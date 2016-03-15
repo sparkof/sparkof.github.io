@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.questionnaire {
+  font-family: Verdana, Arial, sans-serif;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+.q-header {
+  text-align: center;
+  font-size: 110%;
+}
+.q-list {
+  font-size: 120%;
+  margin-top: 40px;
+}
+.q-list-item {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.q-option-list {
+  list-style: none;
+  margin-top: 20px;
+}
+.q-option-item {
+  font-size: 80%;
+  margin-top: 5px;
+  position: relative;
+  padding-left: 25px;
+}
+.q-option-item label {
+  cursor: pointer;
+}
+.q-option-item label:before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+  border: 2px solid black;
+  background-color: #cfe2f3;
+}
+.q-option-item input[type='checkbox'] {
+  display: none;
+}
+.q-option-item input[type='checkbox']:checked + label:before {
+    content: "\2714";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 8px;
+    color: #000;
+    text-align: center;
+}
+.q-form input[type='submit'] {
+  border: 2px solid black;
+  background-color: #cfe2f3;
+  display: block;
+  font-size: 120%;
+  margin: 0 auto;
+  height: 50px;
+  width: 50%;
+}
