@@ -17,7 +17,7 @@ pauseButton.style.display = 'none';
 
 var timer = {
   start: function() {
-    timerId = setInterval(tick, 1);
+    timerId = setInterval(tick, 25);
     pauseButton.style.display = 'inline-block';
     startButton.innerHTML = "Continue";
     startButton.style.display = 'none';
@@ -50,7 +50,7 @@ pauseButton.addEventListener('click', timer.pause);
 clearButton.addEventListener('click', timer.clear);
 
 function tick() {
-  miliseconds++;
+  miliseconds += 25;
   milisecondsDOM.innerHTML = miliseconds;
   if ( miliseconds === 1000 ) {
     seconds++;
