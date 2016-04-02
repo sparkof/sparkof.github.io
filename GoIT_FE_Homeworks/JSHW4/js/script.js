@@ -36,6 +36,7 @@ $(function () {
     $(this).siblings("em").animate({opacity: 1, left: "+=35"}, "normal");
   }
   function hideTooltip() {
+    $(this).siblings("em").stop(true);
     $(this).siblings("em").animate({opacity: 0, left: "-=35"}, "fast");
   }
   $("input[type='text']").hover(showTooltip, hideTooltip);
