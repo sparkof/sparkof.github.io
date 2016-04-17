@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plugins</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/chosen.min.css">
+  <link rel="stylesheet" href="css/rcswitcher.min.css">
+
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/jquery.jcarousel.js"></script>
+  <script src="js/chosen.jquery.min.js"></script>
+  <script src="js/rcswitcher.min.js"></script>
+  <script src="js/script.js"></script>
+
+</head>
+
+<body>
+  <menu class="clearfix">
+    <ul class="main__menu">
+      <li class="main__item"><a class="menu__link" href="">Пункт 1</a></li>
+      <li class="main__item"><a class="menu__link" href="">Пункт 2</a></li>
+      <li class="main__item"><a class="menu__link" href="">Пункт 3</a>
+        <ul class="submenu">
+          <li class="submenu__item"><a href="" class="submenu__link">Подпункт 1</a></li>
+          <li class="submenu__item"><a href="" class="submenu__link">Подпункт 2</a></li>
+          <li class="submenu__item"><a href="" class="submenu__link">Подпункт 3</a>
+            <ul class="submenu">
+              <li class="submenu__item"><a href="" class="submenu__link">Подпункт 1</a></li>
+              <li class="submenu__item"><a href="" class="submenu__link">Подпункт 2</a></li>
+              <li class="submenu__item"><a href="" class="submenu__link">Подпункт 3</a>
+                <ul class="submenu">
+                  <li class="submenu__item"><a href="" class="submenu__link">Подпункт 1</a></li>
+                  <li class="submenu__item"><a href="" class="submenu__link">Подпункт 2</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="main__item"><a class="menu__link" href="">Пункт 4</a></li>
+      <li class="main__item"><a class="menu__link" href="">Пункт 5</a></li>
+    </ul>
+  </menu>
+
+  <div class="carousel-wrapper">
+    <div class="jcarousel">
+      <ul class="jcarousel__list">
+        <li class="jcarousel__item"><a href="#" class="jcarousel__link"><img src="http://cdn.allwallpaper.in/wallpapers/800x600/11334/cats-animals-sand-cat-800x600-wallpaper.jpg" alt="jCarousel image" class="jcarousel__img"></a></li>
+        <li class="jcarousel__item"><a href="#" class="jcarousel__link"><img src="http://catssy.com/wp-content/uploads/2015/05/cat-wrapped-up-800x600.jpg" alt="jCarousel image" class="jcarousel__img"></a></li>
+        <li class="jcarousel__item"><a href="#" class="jcarousel__link"><img src="http://cdn.allwallpaper.in/wallpapers/800x600/3132/cats-animals-glasses-800x600-wallpaper.jpg" alt="jCarousel image" class="jcarousel__img"></a></li>
+        <li class="jcarousel__item"><a href="#" class="jcarousel__link"><img src="http://wallpaper.1000webgames.com/wallpapers/bengal_cat_desktop_wallpaper-800x600.jpg" alt="jCarousel image" class="jcarousel__img"></a></li>
+      </ul>
+    </div>
+    <a class="jcarousel-prev" href="#">‹</a>
+    <a class="jcarousel-next" href="#">›</a>
+  </div>
+
+  <div class="custom-selector">
+    <select name="mySelect" id="select">
+      <option value="1">Custom</option>
+      <option value="2">select</option>
+      <option value="3">called</option>
+      <option value="4">chosen</option>
+    </select>
+  </div>
+
+  <div class="custom-checkboxes">
+    <div class="jquery-checkbox">
+      JQUERY CHECKBOXES
+      <ul>
+        <li>
+          <label for="jq-checkbox1">checkbox #1</label>
+          <input type="checkbox" id="jq-checkbox1" name="chb1" value="chb1">
+        </li>
+        <li>
+          <label for="jq-checkbox2">checkbox #2</label>
+          <input type="checkbox" id="jq-checkbox2" name="chb2" value="chb2" checked>
+        </li>
+        <li>
+          <label for="jq-checkbox3">checkbox #3</label>
+          <input type="checkbox" id="jq-checkbox3" name="chb3" value="chb3" checked disabled="true">
+        </li>
+      </ul>
+    </div>
+    <div class="css3-checkbox">
+      CSS3 CHECKBOXES
+      <ul>
+        <li>
+          <input type="checkbox" id="css-checkbox1">
+          <label for="css-checkbox1">checkbox #1</label>
+        </li>
+        <li>
+          <input type="checkbox" id="css-checkbox2" checked>
+          <label for="css-checkbox2">checkbox #2</label>
+        </li>
+        <li>
+          <input type="checkbox" id="css-checkbox3" checked disabled="true">
+          <label for="css-checkbox3">checkbox #3</label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
