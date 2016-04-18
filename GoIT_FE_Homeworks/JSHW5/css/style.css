@@ -9,9 +9,44 @@
 }
 /*menu*/
 menu {
+  position: relative;
+  padding-bottom: 50px;
   margin: 20px auto;
   width: 900px;
-  z-index: 1;
+  z-index: 100;
+}
+menu ul {
+  list-style: none;
+}
+.menu__link, .submenu__link {
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #222;
+}
+.main__item {
+  float: left;
+  width: 150px;
+  position: relative;
+  text-align: center;
+}
+.submenu {
+  position: absolute;
+  width: 150px;
+  text-align: left;
+}
+menu li {
+  border: 1px solid black;
+  height: 22px;
+  line-height: 22px;
+  background-color: #65f662;
+}
+menu a {
+  position: relative;
+}
+menu .has-submenu::after{
+  position: absolute;
+  right: 5px;
+  content: '*';
 }
 /*carousel*/
 .carousel-wrapper {

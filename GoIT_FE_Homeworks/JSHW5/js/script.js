@@ -1,4 +1,5 @@
 $(function() {
+// КАРУСЕЛЬ
     $('.jcarousel')
     .jcarousel({
         animation: 'slow',
@@ -20,9 +21,9 @@ $(function() {
       event.preventDefault();
     });
 
-
+// СЕЛЕКТ
     $('#select').chosen({disable_search_threshold: 10, width: "95%"})
-
+// ЧЕКБОКСЫ
     $('.jquery-checkbox :checkbox').rcSwitcher({
                                 // Default value            // info
 
@@ -38,41 +39,42 @@ $(function() {
         autoStick: true         // false                    auto stick switch to its parent side
     });
 
-    $('menu ul').css('list-style', 'none');
-    $('.main__item').css({
-      float: 'left',
-      width: '100px',
-      position: 'relative'
-    });
+// МЕНЮ
 
-    $('.submenu').css({
-      width: '100px',
-    }).hide();
-
-    console.log($('.submenu').parent().height());
-
+    $('.submenu').hide();
     $('.main__item').hover(function () {
-      $(this).children('.submenu').slideDown()
+      $(this).children('.submenu').slideDown();
     }, function () {
-      $(this).children('.submenu').stop(true,true).fadeOut()
+      $(this).children('.submenu').stop(true,true).fadeOut();
     });
-
 
     $('.submenu__item').hover(function () {
         $(this).css('position', 'relative').children('.submenu')
         .css({
           position: 'absolute',
-          left: '100px',
-          top: '0px'
+          left: '150px',
+          top: '0px',
         })
         .fadeIn()
     } , function () {
         $(this).children('.submenu').fadeOut()
     })
 
+var bgcol = $('menu li').css('backgroundColor');
 
+    $('menu li').hover(function () {
+      $(this).animate({
+        duration: '550',
+        backgroundColor: "#0bd"
+      });
+    }, function () {
+        $(this).stop(true,true).animate({
+          duration: '550',
+          backgroundColor: bgcol
+        });
+    });
 
-
+  $('menu li').has('.submenu').addClass('has-submenu');
 
 
 
