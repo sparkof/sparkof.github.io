@@ -35,7 +35,7 @@ menu ul {
   text-align: left;
 }
 menu li {
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   height: 22px;
   line-height: 22px;
   background-color: #65f662;
