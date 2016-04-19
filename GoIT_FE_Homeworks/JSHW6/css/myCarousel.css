@@ -1,0 +1,38 @@
+.myCarousel {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.myCarousel-list {
+  width: 20000px;
+  list-style: none;
+  position: relative;
+}
+
+.myCarousel-element {
+  display: block;
+  float: left;
+}
+
+.myCarousel-prev,
+.myCarousel-next {
+  background-color: rgba(121, 223, 255, 0.1);
+  color: #7edffe;
+  cursor: pointer;
+  font-size: 60px;
+  line-height: 240px;
+  position: absolute;
+  text-align: center;
+  width: 50px;
+  height: 100%;
+
+}
+.myCarousel-prev {
+  top: 0;
+  left: 0;
+}
+.myCarousel-next {
+  top: 0;
+  right: 0;
+}
