@@ -7,7 +7,7 @@
       hiderWidth: 3,                       //картинок в карусели видно
       swipeTime: 2000,                     //время 1 перелистывания
       swipeSize: 3,                        //размер 1 перелистывания(кол-во картинок)
-      autoscroll: false,                    //автоперелистывание
+      autoscroll: true,                    //автоперелистывание
       scrollInterval: 7000,                //время автоперелистывания
       easing: false,                       //сглаживание *используется модуль jquery.easing.js
       circle: true,                        //листать по кругу
@@ -30,6 +30,7 @@
         maximumOffset = $('.myCarousel-element').length * (parseInt(settings.imgWidth) + parseInt(settings.indent)) - (settings.hiderWidth * (parseInt(settings.imgWidth) + parseInt(settings.indent)));
 
     function swipeRight() {
+      $('.myCarousel-list').stop(false, true);
       if (currentOffset < maximumOffset) {
         $('.myCarousel-list').animate( {
           left: '-=' + offset + 'px'
@@ -44,6 +45,7 @@
     }
 
     function swipeLeft() {
+      $('.myCarousel-list').stop(false, true);
       if (currentOffset > 0) {
         $('.myCarousel-list').animate( {
           left: '+=' + offset + 'px'
