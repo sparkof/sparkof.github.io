@@ -19,12 +19,12 @@
         <ol>
           <% for (var i = 0; i < data.length; i++) { %>
             <li>
-              <%= data[i].text %>
+              <span title=<%= data[i].questionID %>><%= data[i].text %></span>
               <ul>
                 <% for(var j = 0; j < data[i].answers.length; j++) { %>
                 <% var id = 'q-' + i + '-' + j; %>
                   <li>
-                    <input type="checkbox" id=<%= id %> >
+                    <input type="checkbox" id=<%= id %> value=<%= data[i].answers[j].value %> >
                     <label for=<%= id %>><%= data[i].answers[j].text %></label>
                   </li>
                 <% } %>

@@ -1,83 +1,108 @@
 "use strict";
 $(function () {
 var questions = [ {
-    text: "Вопрос №1",
+    questionID: 1,
+    text: "Сколько будет 2+2 ?",
     answers: [ {
-        text: "Неправильный ответ",
-        correct: false
+        text: "8",
+        correct: false,
+        value: 1
       }, {
-        text: "Правильный ответ",
-        correct: true
+        text: "4",
+        correct: true,
+        value: 2
       }, {
-        text: "Неправильный ответ",
-        correct: false
+        text: "2",
+        correct: false,
+        value: 3
       }, {
-        text: "Неправильный ответ",
-        correct: false
+        text: "24",
+        correct: false,
+        value: 4
       }
     ]
   }, {
-    text: "Вопрос №2",
+    questionID: 2,
+    text: "Какие числа в сумме дают 10?",
     answers: [ {
-        text: "Неправильный ответ",
-        correct: false
+        text: "2 и 5",
+        correct: false,
+        value: 1
       }, {
-        text: "Правильный ответ",
-        correct: true
+        text: "2 и 8",
+        correct: true,
+        value: 2
       }, {
-        text: "Неправильный ответ",
-        correct: false
+        text: "4 и 7",
+        correct: false,
+        value: 3
       }, {
-        text: "Правильный ответ",
-        correct: true
+        text: "4 и 6",
+        correct: true,
+        value: 4
       }
     ]
   }, {
-    text: "Вопрос №3",
+    questionID: 3,
+    text: "2 + 2 / 2 = ?",
     answers: [ {
-        text: "Правильный ответ",
-        correct: true
+        text: "3",
+        correct: true,
+        value: 1
       }, {
-        text: "Неправильный ответ",
-        correct: false
+        text: "4",
+        correct: false,
+        value: 2
       }, {
-        text: "Неправильный ответ",
-        correct: false
+        text: "2",
+        correct: false,
+        value: 3
       }, {
-        text: "Неправильный ответ",
-        correct: false
+        text: "нет правильного ответа",
+        correct: false,
+        value: 4
       }
     ]
   }, {
-    text: "Вопрос №4",
+    questionID: 4,
+    text: "Сколько нужно программистов, чтобы заменить лампочку?",
     answers: [ {
-        text: "Правильный ответ",
-        correct: true
+        text: "Ниодного, проблема не программная",
+        correct: true,
+        value: 1
       }, {
-        text: "Неправильный ответ",
-        correct: false
+        text: "1",
+        correct: false,
+        value: 2
       }, {
-        text: "Неправильный ответ",
-        correct: false
+        text: "2",
+        correct: false,
+        value: 3
       }, {
-        text: "Неправильный ответ",
-        correct: false
+        text: "3",
+        correct: false,
+        value: 4
       }
     ]
   }, {
-    text: "Вопрос №5",
+    questionID: 5,
+    text: "Какие числа в сумме дают 10?",
     answers: [ {
-        text: "Правильный ответ",
-        correct: true
+        text: "5 и 5",
+        correct: true,
+        value: 1
       }, {
-        text: "Неправильный ответ",
-        correct: false
+        text: "2 и 9",
+        correct: false,
+        value: 2
       }, {
-        text: "Неправильный ответ",
-        correct: false
+        text: "8 и 3",
+        correct: false,
+        value: 3
       }, {
-        text: "Правильный ответ",
-        correct: true
+        text: "7 и 3",
+        correct: true,
+        value: 4
       }
     ]
   }
