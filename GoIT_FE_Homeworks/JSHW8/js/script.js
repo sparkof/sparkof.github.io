@@ -1,11 +1,11 @@
 "use strict"
-function GoogleCallback(jqueryObj, data) {
+function GoogleCallback(data) {
   console.log(arguments);
   $('.wrapper ul').remove();
   var ul = document.createElement("ul");
-    $.each(data.results, function(i, val){
+    $.each(data.items, function(i, val){
             var li = document.createElement("li");
-            li.innerHTML = '<a class="link" href="'+val.url+'" title="'+val.url+'" target="_blank">'+val.title+"</a><p class='url'>" + val.visibleUrl + "</p><p class='content'>" + val.content + "</p>";
+            li.innerHTML = '<a class="link" href="'+val.link+'" title="'+val.displayLink+'" target="_blank">'+val.htmlTitle+"</a><p class='url'>" + val.formattedUrl + "</p><p class='content'>" + val.htmlSnippet + "</p>";
             ul.appendChild(li);
     });
     $('.wrapper').append(ul);
