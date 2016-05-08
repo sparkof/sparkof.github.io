@@ -1,6 +1,6 @@
 "use strict"
 function GoogleCallback(jqueryObj, data) {
-  console.log('data =', data);
+  console.log(arguments);
   $('.wrapper ul').remove();
   var ul = document.createElement("ul");
     $.each(data.results, function(i, val){
@@ -18,12 +18,27 @@ $(function () {
   //     };
   // });
 
+  // <script>
+  //   (function() {
+  //     var gcse = document.createElement('script');
+  //     gcse.type = 'text/javascript';
+  //     gcse.async = true;
+  //     gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  //     var s = document.getElementsByTagName('script')[0];
+  //     s.parentNode.insertBefore(gcse, s);
+  //   })();
+  // </script>
+  // <gcse:search></gcse:search>
+
+
 $('.searchForm form').submit(function (e) {
   e.preventDefault();
   var text = $('.searchForm [type="text"]').val();
   console.log(text);
+  var cx = '004362905671051512275:elyp8llfgkg';
+
   $.ajax({
-    url: 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&key=ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg&q=' + text + '&callback=GoogleCallback&context=?',
+    url: 'https://www.googleapis.com/customsearch/v1?key=AIzaSyCWYVWkxLfquDZaIX0qkwWN0U6x0og9Sgo&cx='+ cx + '&q=' + text + '&callback=GoogleCallback',
     dataType: 'jsonp',
     method: 'GET'
   })
@@ -45,7 +60,7 @@ function Worker() {
 }
 Worker.prototype = new Human();
 Worker.prototype.work = function () {
-  console.log("Hi! My name is " + this.name + ", I'm working in " + this.company + ". Working...");
+  console.log("Hi! My name is " + this.name + ", I'm working in " + this.job + ". Working...");
   this.money += this.salary;
   console.log("I've taken my salary and now I have " + this.money + "$");
 }
