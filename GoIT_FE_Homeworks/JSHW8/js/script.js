@@ -18,19 +18,6 @@ $(function () {
   //     };
   // });
 
-  // <script>
-  //   (function() {
-  //     var gcse = document.createElement('script');
-  //     gcse.type = 'text/javascript';
-  //     gcse.async = true;
-  //     gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-  //     var s = document.getElementsByTagName('script')[0];
-  //     s.parentNode.insertBefore(gcse, s);
-  //   })();
-  // </script>
-  // <gcse:search></gcse:search>
-
-
 $('.searchForm form').submit(function (e) {
   e.preventDefault();
   var text = $('.searchForm [type="text"]').val();
