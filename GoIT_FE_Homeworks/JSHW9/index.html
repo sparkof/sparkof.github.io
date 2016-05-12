@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SCSS, lodash</title>
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    <img src="img/" alt="">
+    <span>Build Home</span>
+    <span>Industrial Theme</span>
+    <ul class="contact">
+      <li class="contact__item"><a href="#">
+          <div class="contact__sprite1"></div>
+        </a></li>
+      <li class="contact__item"><a href="#">
+          <div class="contact__sprite2"></div>
+        </a></li>
+      <li class="contact__item"><a href="#">
+          <div class="contact__sprite3"></div>
+        </a></li>
+      <li class="contact__item"><a href="#">
+          <div class="contact__sprite4"></div>
+        </a></li>
+      <li class="contact__item"><a href="#">
+          <div class="contact__sprite5"></div>
+        </a></li>
+    </ul>
+  </header>
+  <menu>
+    <ul class="nav">
+      <li class="nav__item"><a class= "nav__link" href="#">Home</a></li>
+      <li class="nav__item"><a class= "nav__link" href="#">Features</a></li>
+      <li class="nav__item"><a class= "nav__link" href="#">Services</a></li>
+      <li class="nav__item"><a class= "nav__link" href="#">News</a></li>
+      <li class="nav__item"><a class= "nav__link" href="#">Shop</a></li>
+    </ul>
+    <div class="search">
+      <form class="search__form" action="#">
+        <input class="search__text" type="text" name="name" value="" placeholder="Search...">
+        <input class="search__img" type="image" src="img/">
+      </form>
+    </div>
+  </menu>
+  <section class="slider">
+    <ul class="slider__list">
+      <li class="slider__item"><img src="#" alt=""></li>
+      <li class="slider__item"><img src="#" alt=""></li>
+      <li class="slider__item"><img src="#" alt=""></li>
+    </ul>
+  </section>
+  <section class="advantages">
+    <div class="advantage1">
+      <span class="number">01</span>
+      <div class="advanage__content">
+        <div class="advanage__sprite1"></div>
+        <h2 class="advantage__head">Power Inside</h2>
+        <p class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero vitae illo obcaecati quidem doloremque deserunt, reprehenderit at exercitationem debitis architecto repudiandae unde magni placeat atque temporibus, officia vero doloribus velit.</p>
+        <a href="" class="advantage__readmore">Read More</a>
+      </div>
+    </div>
+    <div class="advantage2">
+      <span class="number">02</span>
+      <div class="advanage__content">
+        <div class="advanage__sprite2"></div>
+        <h2 class="advantage__head">New Technologies</h2>
+        <p class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus unde natus suscipit quos optio temporibus neque aperiam, accusamus culpa nihil eveniet, repellendus quis facere aliquid ipsa ad totam quas sequi.</p>
+        <a href="" class="advantage__readmore">Read More</a>
+      </div>
+    </div>
+    <div class="advantage3">
+      <span class="number">03</span>
+      <div class="advanage__content">
+        <div class="advanage__sprite3"></div>
+        <h2 class="advantage__head">Fast Support</h2>
+        <p class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur harum, quasi, omnis dignissimos optio aut expedita ab totam adipisci natus molestias ad fuga minima inventore facere. Error, dicta velit deleniti.</p>
+        <a href="" class="advantage__readmore">Read More</a>
+      </div>
+    </div>
+  </section>
+  <section class="services">
+    <h1 class="services__head">Our Services</h1>
+    <ul class="sevices__list">
+      <li class="services__item"><a href="#" class="services__link"><div class="services__hoverLayout"></div><img src="img/" alt="" class="services__image"><span class="services__title">Schedule Services</span></a></li>
+      <li class="services__item"><a href="#" class="services__link"><div class="services__hoverLayout"></div><img src="img/" alt="" class="services__image"><span class="services__title">Preventive Maintance</span></a></li>
+      <li class="services__item"><a href="#" class="services__link"><div class="services__hoverLayout"></div><img src="img/" alt="" class="services__image"><span class="services__title">Tire &amp; Wheel Services</span></a></li>
+      <li class="services__item"><a href="#" class="services__link"><div class="services__hoverLayout"></div><img src="img/" alt="" class="services__image"><span class="services__title">Repair Services</span></a></li>
+    </ul>
+  </section>
+  <section class="newsAndBanners">
+    <div class="news">
+      <h2 class="news__head">Latest News</h2>
+      <ul class="news__list">
+        <script type="text/template" id="news">
+          <% for (var i = 0; i < 2; i++) { %>
+          <li>
+            <div class="news__imageBlock">
+              <div class="news__month"><%= data[i].month %></div>
+              <div class="news__date"><%= data[i].date %></div>
+              <img src=<%= data[i].imgSrc %> alt="" class="news__image">
+            </div>
+            <div class="news__textBlock">
+              <h3 class="news__title"><a href="#" class="news__titleLink"><%= data[i].title %></a></h3>
+              <p class="news__secondLine">by <a href="#" class="news__author"><%= data[i].author %></a> Comments (<a href="#" class="news__comment"><%= data[i].comments %></a>)</p>
+              <p class="news__text"><%= data[i].text %></p>
+            </div>
+          </li>
+          <% } %>
+        </script>
+      </ul>
+    </div>
+    <div class="banners">
+      <h2 class="banners__head">Banners__place</h2>
+      <div class="banners__panel">
+        <div class="banners__toggle">+</div>
+        <div class="banners__title">ACCORDION PANNEL 1</div>
+        <div class="banners__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo dolor laudantium sapiente numquam tenetur rem doloribus, veniam nostrum necessitatibus voluptas rerum veritatis velit voluptatibus debitis mollitia totam. Necessitatibus, corporis non?</div>
+      </div>
+      <div class="banners__panel">
+        <div class="banners__toggle">+</div>
+        <div class="banners__title">ACCORDION PANNEL 2</div>
+        <div class="banners__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo dolor laudantium sapiente numquam tenetur rem doloribus, veniam nostrum necessitatibus voluptas rerum veritatis velit voluptatibus debitis mollitia totam. Necessitatibus, corporis non?</div>
+      </div>
+      <div class="banners__panel">
+        <div class="banners__toggle">+</div>
+        <div class="banners__title">ACCORDION PANNEL 3</div>
+        <div class="banners__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo dolor laudantium sapiente numquam tenetur rem doloribus, veniam nostrum necessitatibus voluptas rerum veritatis velit voluptatibus debitis mollitia totam. Necessitatibus, corporis non?</div>
+      </div>
+      <div class="banners__panel">
+        <div class="banners__toggle">+</div>
+        <div class="banners__title">ACCORDION PANNEL 4</div>
+        <div class="banners__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo dolor laudantium sapiente numquam tenetur rem doloribus, veniam nostrum necessitatibus voluptas rerum veritatis velit voluptatibus debitis mollitia totam. Necessitatibus, corporis non?</div>
+      </div>
+    </div>
+  </section>
+  <section class="logotips">
+    <ul class="logotips__list">
+      <li class="logotips__item">
+        <div class="logotips__sprite1"></div>
+      </li>
+      <li class="logotips__item">
+        <div class="logotips__sprite2"></div>
+      </li>
+      <li class="logotips__item">
+        <div class="logotips__sprite3"></div>
+      </li>
+      <li class="logotips__item">
+        <div class="logotips__sprite4"></div>
+      </li>
+      <li class="logotips__item">
+        <div class="logotips__sprite5"></div>
+      </li>
+      <li class="logotips__item">
+        <div class="logotips__sprite6"></div>
+      </li>
+    </ul>
+  </section>
+  <footer>
+    <ul class="footer__nav">
+      <li class="footer__navItem">SOCIALS
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#" class="footer__link">Facebook</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Flickr</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Twitter</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Vimeo</a></li>
+        </ul>
+      </li>
+      <li class="footer__navItem">LINKS
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#" class="footer__link">How to Write a Blog</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Create a Blog in 4 Steps</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">15 Tips to Increase Traffic</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">20 Blog Post Ideas</a></li>
+        </ul>
+      </li>
+      <li class="footer__navItem">BLOGROLL
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#" class="footer__link">Blogs Blog</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Roll Up Roll Up</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Blog Free</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Wordpress Blog</a></li>
+        </ul>
+      </li>
+      <li class="footer__navItem">ABOUT US
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#" class="footer__link">Agriculture</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Harvest</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Company news</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Investor relations</a></li>
+        </ul>
+      </li>
+    </ul>
+  </footer>
+  <section class="author">
+    <ul class="author__list">
+      <li class="author__adress">
+        <div class="author__sprite1"></div>
+        BuildHomeLtd. Street Name 123  23 45 Cityname
+      </li>
+      <li class="author__phone">
+        <div class="author__sprite2"></div>
+        + 123 900 123 456
+      </li>
+      <li class="author__email">
+        <div class="author__sprite3"></div>
+        info@buildhome.web
+      </li>
+      <li class="author__copy">
+        &copy; 2014 Build Home
+      </li>
+    </ul>
+  </section>
+</div>
+</body>
+</html>
