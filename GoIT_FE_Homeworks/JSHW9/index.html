@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" charset="utf-8"></script>
+    <script src="build/js/template.js"></script>
+    <script src="src/js/news.js"></script>
+    <script src="build/js/script.js"></script>
+    <link rel="stylesheet" href="build/css/style.css">
   <title>SCSS, lodash</title>
 </head>
 <body>
 <div class="wrapper">
   <header>
-    <img src="img/" alt="">
-    <span>Build Home</span>
-    <span>Industrial Theme</span>
+    <div class="sprite"></div>
+    <span class="firstLine">Build Home</span><br>
+    <span class="secondLine">Industrial Theme</span>
     <ul class="contact">
       <li class="contact__item"><a href="#">
           <div class="contact__sprite1"></div>
@@ -28,9 +33,9 @@
         </a></li>
     </ul>
   </header>
-  <menu>
+  <menu class="clearfix">
     <ul class="nav">
-      <li class="nav__item"><a class= "nav__link" href="#">Home</a></li>
+      <li class="nav__item active"><a class= "nav__link" href="#">Home</a></li>
       <li class="nav__item"><a class= "nav__link" href="#">Features</a></li>
       <li class="nav__item"><a class= "nav__link" href="#">Services</a></li>
       <li class="nav__item"><a class= "nav__link" href="#">News</a></li>

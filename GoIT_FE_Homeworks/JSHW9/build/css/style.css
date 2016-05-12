@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial; }
+
+ul {
+  list-style: none; }
+
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block; }
+
+.wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-top: 40px; }
+
+header {
+  margin-bottom: 20px; }
+  header .sprite {
+    float: left;
+    margin-left: 5px;
+    margin-right: 10px;
+    height: 36px;
+    width: 36px;
+    background: url("../../img/sprite.png") no-repeat; }
+  header .firstLine {
+    color: #444444;
+    display: inline-block;
+    margin-top: -4px;
+    font-weight: bold;
+    font-size: 30px; }
+  header .secondLine {
+    color: #797979;
+    display: block;
+    margin-top: -2px;
+    text-transform: uppercase;
+    font-size: 12px;
+    max-width: 200px; }
+
+.contact {
+  float: right;
+  margin-top: -36px; }
+
+.contact__item {
+  float: left;
+  padding: 5px; }
+  .contact__item div {
+    height: 18px;
+    background-image: url("../../img/sprite.png");
+    background-repeat: no-repeat; }
+
+.contact__sprite1 {
+  width: 8px;
+  background-position: -38px 1px; }
+  .contact__sprite1:hover {
+    background-position: -38px -18px; }
+
+.contact__sprite2 {
+  width: 16px;
+  background-position: -47px -1px; }
+  .contact__sprite2:hover {
+    background-position: -47px -19px; }
+
+.contact__sprite3 {
+  width: 16px;
+  background-position: -64px -1px; }
+  .contact__sprite3:hover {
+    background-position: -64px -19px; }
+
+.contact__sprite4 {
+  width: 16px;
+  background-position: -81px -1px; }
+  .contact__sprite4:hover {
+    background-position: -81px -19px; }
+
+.contact__sprite5 {
+  width: 16px;
+  background-position: -97px -1px; }
+  .contact__sprite5:hover {
+    background-position: -97px -18px; }
