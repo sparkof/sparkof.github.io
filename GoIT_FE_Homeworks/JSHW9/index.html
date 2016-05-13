@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
     <script src="https://code.jquery.com/jquery-2.2.3.min.js" charset="utf-8"></script>
     <script src="build/js/template.js"></script>
+    <script src="build/js/slick.js"></script>
     <script src="src/js/news.js"></script>
     <script src="build/js/script.js"></script>
+
+    <link rel="stylesheet" href="build/css/slick.css">
+    <link rel="stylesheet" href="build/css/slick-theme.css">
     <link rel="stylesheet" href="build/css/style.css">
   <title>SCSS, lodash</title>
 </head>
 <body>
-<div class="wrapper">
+<div class="wrapper first">
   <header>
     <div class="sprite"></div>
     <span class="firstLine">Build Home</span><br>
@@ -34,28 +38,28 @@
     </ul>
   </header>
   <menu class="clearfix">
-    <ul class="nav">
-      <li class="nav__item active"><a class= "nav__link" href="#">Home</a></li>
-      <li class="nav__item"><a class= "nav__link" href="#">Features</a></li>
-      <li class="nav__item"><a class= "nav__link" href="#">Services</a></li>
-      <li class="nav__item"><a class= "nav__link" href="#">News</a></li>
-      <li class="nav__item"><a class= "nav__link" href="#">Shop</a></li>
-    </ul>
-    <div class="search">
-      <form class="search__form" action="#">
-        <input class="search__text" type="text" name="name" value="" placeholder="Search...">
-        <input class="search__img" type="image" src="img/">
-      </form>
-    </div>
-  </menu>
+      <ul class="nav">
+        <li class="nav__item active"><a class= "nav__link" href="#">Home</a></li>
+        <li class="nav__item"><a class= "nav__link" href="#">Features</a></li>
+        <li class="nav__item"><a class= "nav__link" href="#">Services</a></li>
+        <li class="nav__item"><a class= "nav__link" href="#">News</a></li>
+        <li class="nav__item"><a class= "nav__link" href="#">Shop</a></li>
+      </ul>
+      <div class="search">
+        <form class="search__form" action="#">
+          <input class="search__text" type="text" name="name" value="" placeholder="Search...">
+          <input class="search__img" type="image" src="img/transparent.png">
+        </form>
+      </div>
+    </menu>
   <section class="slider">
-    <ul class="slider__list">
-      <li class="slider__item"><img src="#" alt=""></li>
-      <li class="slider__item"><img src="#" alt=""></li>
-      <li class="slider__item"><img src="#" alt=""></li>
-    </ul>
+    <div class="slider__list">
+      <div class="slider__item"><img src="img/logo1.jpg" alt=""></div>
+      <div class="slider__item"><img src="img/logo1.jpg" alt=""></div>
+      <div class="slider__item"><img src="img/logo1.jpg" alt=""></div>
+    </div>
   </section>
-  <section class="advantages">
+  <section class="advantages clearfix">
     <div class="advantage1">
       <span class="number">01</span>
       <div class="advanage__content">
@@ -84,22 +88,26 @@
       </div>
     </div>
   </section>
-  <section class="services">
+</div>
+<section class="services clearfix">
+  <div class="wrapper">
     <h1 class="services__head">Our Services</h1>
     <ul class="sevices__list">
-      <li class="services__item"><a href="#" class="services__link"><div class="services__hoverLayout"></div><img src="img/" alt="" class="services__image"><span class="services__title">Schedule Services</span></a></li>
-      <li class="services__item"><a href="#" class="services__link"><div class="services__hoverLayout"></div><img src="img/" alt="" class="services__image"><span class="services__title">Preventive Maintance</span></a></li>
-      <li class="services__item"><a href="#" class="services__link"><div class="services__hoverLayout"></div><img src="img/" alt="" class="services__image"><span class="services__title">Tire &amp; Wheel Services</span></a></li>
-      <li class="services__item"><a href="#" class="services__link"><div class="services__hoverLayout"></div><img src="img/" alt="" class="services__image"><span class="services__title">Repair Services</span></a></li>
+      <li class="services__item"><a href="#" class="services__link"><div class="services__hoverLayout"></div><img src="img/services1.jpg" alt="" class="services__image"><span class="services__title">Schedule Services</span></a></li>
+      <li class="services__item"><a href="#" class="services__link"><div class="services__hoverLayout"></div><img src="img/services2.jpg" alt="" class="services__image"><span class="services__title">Preventive Maintance</span></a></li>
+      <li class="services__item"><a href="#" class="services__link"><div class="services__hoverLayout"></div><img src="img/services3.jpg" alt="" class="services__image"><span class="services__title">Tire &amp; Wheel Services</span></a></li>
+      <li class="services__item"><a href="#" class="services__link"><div class="services__hoverLayout"></div><img src="img/services4.jpg" alt="" class="services__image"><span class="services__title">Repair Services</span></a></li>
     </ul>
-  </section>
-  <section class="newsAndBanners">
+  </div>
+</section>
+<div class="wrapper first">
+  <section class="newsAndBanners clearfix">
     <div class="news">
       <h2 class="news__head">Latest News</h2>
       <ul class="news__list">
         <script type="text/template" id="news">
           <% for (var i = 0; i < 2; i++) { %>
-          <li>
+          <li class="news__item">
             <div class="news__imageBlock">
               <div class="news__month"><%= data[i].month %></div>
               <div class="news__date"><%= data[i].date %></div>
@@ -116,30 +124,38 @@
       </ul>
     </div>
     <div class="banners">
-      <h2 class="banners__head">Banners__place</h2>
+      <h2 class="banners__head">Banners place</h2>
       <div class="banners__panel">
-        <div class="banners__toggle">+</div>
-        <div class="banners__title">ACCORDION PANNEL 1</div>
+        <div class="banners__panelWrapper clearfix">
+          <div class="banners__toggle">+</div>
+          <div class="banners__title">ACCORDION PANNEL 1</div>
+        </div>
         <div class="banners__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo dolor laudantium sapiente numquam tenetur rem doloribus, veniam nostrum necessitatibus voluptas rerum veritatis velit voluptatibus debitis mollitia totam. Necessitatibus, corporis non?</div>
       </div>
       <div class="banners__panel">
-        <div class="banners__toggle">+</div>
-        <div class="banners__title">ACCORDION PANNEL 2</div>
+        <div class="banners__panelWrapper clearfix">
+          <div class="banners__toggle">+</div>
+          <div class="banners__title">ACCORDION PANNEL 2</div>
+        </div>
         <div class="banners__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo dolor laudantium sapiente numquam tenetur rem doloribus, veniam nostrum necessitatibus voluptas rerum veritatis velit voluptatibus debitis mollitia totam. Necessitatibus, corporis non?</div>
       </div>
       <div class="banners__panel">
-        <div class="banners__toggle">+</div>
-        <div class="banners__title">ACCORDION PANNEL 3</div>
+        <div class="banners__panelWrapper clearfix">
+          <div class="banners__toggle">+</div>
+          <div class="banners__title">ACCORDION PANNEL 3</div>
+        </div>
         <div class="banners__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo dolor laudantium sapiente numquam tenetur rem doloribus, veniam nostrum necessitatibus voluptas rerum veritatis velit voluptatibus debitis mollitia totam. Necessitatibus, corporis non?</div>
       </div>
       <div class="banners__panel">
-        <div class="banners__toggle">+</div>
-        <div class="banners__title">ACCORDION PANNEL 4</div>
+        <div class="banners__panelWrapper clearfix">
+          <div class="banners__toggle">+</div>
+          <div class="banners__title">ACCORDION PANNEL 4</div>
+        </div>
         <div class="banners__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo dolor laudantium sapiente numquam tenetur rem doloribus, veniam nostrum necessitatibus voluptas rerum veritatis velit voluptatibus debitis mollitia totam. Necessitatibus, corporis non?</div>
       </div>
     </div>
   </section>
-  <section class="logotips">
+  <section class="logotips clearfix">
     <ul class="logotips__list">
       <li class="logotips__item">
         <div class="logotips__sprite1"></div>
@@ -161,8 +177,10 @@
       </li>
     </ul>
   </section>
-  <footer>
-    <ul class="footer__nav">
+</div>
+<footer>
+  <div class="wrapper">
+    <ul class="footer__nav clearfix">
       <li class="footer__navItem">SOCIALS
         <ul class="footer__list">
           <li class="footer__item"><a href="#" class="footer__link">Facebook</a></li>
@@ -196,26 +214,29 @@
         </ul>
       </li>
     </ul>
-  </footer>
-  <section class="author">
-    <ul class="author__list">
-      <li class="author__adress">
-        <div class="author__sprite1"></div>
-        BuildHomeLtd. Street Name 123  23 45 Cityname
-      </li>
-      <li class="author__phone">
-        <div class="author__sprite2"></div>
-        + 123 900 123 456
-      </li>
-      <li class="author__email">
-        <div class="author__sprite3"></div>
-        info@buildhome.web
-      </li>
-      <li class="author__copy">
-        &copy; 2014 Build Home
-      </li>
-    </ul>
-  </section>
-</div>
+  </div>
+    <section class="author">
+      <div class="wrapper">
+        <ul class="author__list">
+          <li class="author__adress">
+            <div class="author__sprite1"></div>
+            BuildHomeLtd. Street Name 123  23 45 Cityname
+          </li>
+          <li class="author__phone">
+            <div class="author__sprite2"></div>
+            + 123 900 123 456
+          </li>
+          <li class="author__email">
+            <div class="author__sprite3"></div>
+            info@buildhome.web
+          </li>
+          <li class="author__copy">
+            &copy; 2014 Build Home
+          </li>
+        </ul>
+      </div>
+    </section>
+</footer>
+
 </body>
 </html>
