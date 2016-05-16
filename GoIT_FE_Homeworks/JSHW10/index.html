@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tests</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js" charset="utf-8"></script>
+  <script src="build/js/template.js"></script>
+  <script src="build/js/questions.js"></script>
+  <script src="build/js/app.js"></script>
+
+</head>
+<body>
+  <script type="text/template" id="questionnaire">
+    <section class="questionWrapper">
+      <h2>Тест</h2>
+      <form action="#">
+        <ol>
+          <% for (var i = 0; i < data.length; i++) { %>
+            <li>
+              <span title=<%= data[i].questionID %>><%= data[i].text %></span>
+              <ul>
+                <% for(var j = 0; j < data[i].answers.length; j++) { %>
+                <% var id = 'q-' + i + '-' + j; %>
+                  <li>
+                    <input type="checkbox" id=<%= id %> value=<%= data[i].answers[j].value %> >
+                    <label for=<%= id %>><%= data[i].answers[j].text %></label>
+                  </li>
+                <% } %>
+              </ul>
+            </li>
+          <% } %>
+        </ol>
+        <input type="submit" value="Проверить мои результаты">
+      </form>
+    </section>
+</script>
+</body>
+</html>

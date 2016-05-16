@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.questionWrapper {
+  font-family: Verdana, Arial, sans-serif;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+.questionWrapper h2 {
+  text-align: center;
+  font-size: 110%;
+}
+.questionWrapper ol {
+  font-size: 120%;
+  margin-top: 40px;
+}
+.questionWrapper ol>li {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.questionWrapper ul {
+  list-style: none;
+  margin-top: 20px;
+}
+.questionWrapper ul>li {
+  font-size: 80%;
+  margin-top: 5px;
+  position: relative;
+  padding-left: 25px;
+}
+.questionWrapper ul>li label {
+  cursor: pointer;
+}
+.questionWrapper ul>li label:before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+  border: 2px solid black;
+  background-color: #cfe2f3;
+}
+.questionWrapper ul>li input[type='checkbox'] {
+  display: none;
+}
+.questionWrapper ul>li input[type='checkbox']:checked + label:before {
+    content: "\2714";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 8px;
+    color: #000;
+    text-align: center;
+}
+.questionWrapper input[type='submit'] {
+  border: 2px solid black;
+  background-color: #cfe2f3;
+  display: block;
+  font-size: 120%;
+  margin: 0 auto;
+  height: 50px;
+  width: 50%;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.modal {
+  background-color: #fff;
+  border: 2px solid black;
+  box-shadow: 3px 3px 3px;
+  padding: 40px;
+  position: fixed;
+  top: 10%;
+  left: 30%;
+  width: 40%;
+  height: 60%;
+  z-index: 2;
+}
+button[name="close"] {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  padding: 10px;
+}
