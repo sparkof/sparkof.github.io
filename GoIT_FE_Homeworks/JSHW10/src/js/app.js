@@ -58,6 +58,6 @@ $(function () {
   }
   function hideModal() {
     $modal.fadeOut().remove();
-    $overlay.fadeOut().remove();
+    $overlay.remove();
   }
 });
