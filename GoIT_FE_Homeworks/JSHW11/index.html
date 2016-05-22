@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ToDo List</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script data-main="js/app" src="js/require.js"></script>
+</head>
+<body>
+
+  <script type="text/template" id="wrapper-template">
+    <div class="wrapper">
+      <div class="todoList">
+        <h2 class="todoList__head">My ToDo List</h2>
+        <ul class="todoList__list"></ul>
+      </div>
+      <div class="addItem">
+        <input type="text" class="item-value" placeholder="Новая задача...">
+        <button class="item-add">Записать</button>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/template" id="item-template">
+    <% for (var i = 0; i < data.length; i++) { %>
+    <li class="todoList__item clearfix">
+      <span class="todoList__text"><%= data[i] %></span>
+      <img class="todoList__remove" src="img/cross.png" data-index=<%= i %> >
+      <img class="todoList__edit" src="img/edit.png" data-index=<%= i %> >
+    </li>
+    <% } %>
+  </script>
+
+  <script type="text/template" id="edit-template">
+    <div class="overlay"></div>
+    <div class="todoList__editWindow clearfix">
+      <input type="text" class="item-newValue" autofocus>
+      <button class="item-edit">Изменить</button>
+      <button class="item-cancel">Отмена</button>
+    </div>
+  </script>
+
+</body>
+</html>
