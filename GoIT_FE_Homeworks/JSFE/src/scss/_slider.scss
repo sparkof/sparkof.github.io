@@ -1,0 +1,21 @@
+$sliderMaxWidth: 300px;
+$sliderHeight: 400px;
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  max-width: $sliderMaxWidth;
+  height: $sliderHeight;
+  &__slide{
+    position: relative;
+    float: left;
+    max-width: $sliderMaxWidth;
+    height: $sliderHeight;
+  }
+  &__prev {
+    position: absolute;
+  }
+  &__next {
+    position: absolute;
+  }
+}
