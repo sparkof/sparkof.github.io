@@ -2,31 +2,29 @@ function Slider() {
   var self = this;
 
   self.swipeLeft = function (e) {
-    if (e.target.tagname == 'IMG' ) {
-      var currentUl = e.target.parentNode.parentNode.childNodes[1],
+      var currentUl = e.target.parentNode.parentNode.children[1],
           currentOffset = parseInt(currentUl.style.left),
-          maximumOffset = self.sliderWidth * e.currentUl.childNodes.length - self.sliderWidth
-      if ( (currentOffset === 0) {
+          maximumOffset = -(self.sliderWidth * currentUl.children.length - self.sliderWidth);
+      if (currentOffset === 0) {
         currentUl.style.left = maximumOffset + 'px';
-      } else {
-        currentOffset -= self.sliderWidth;
-        currentUl.style.left = currentOffset + 'px';
-      };
-    };
-  };
-
-  self.swipeRight = function () {
-    if (e.target.tagname == 'IMG' ) {
-      var currentUl = e.target.parentNode.parentNode.childNodes[1],
-          currentOffset = parseInt(currentUl.style.left),
-          maximumOffset = self.sliderWidth * e.currentUl.childNodes.length - self.sliderWidth
-      if ( (currentOffset === maximumOffset) {
-        currentUl.style.left = 0;
       } else {
         currentOffset += self.sliderWidth;
         currentUl.style.left = currentOffset + 'px';
       };
-    };
+  };
+
+  self.swipeRight = function (e) {
+    console.log(e);
+      var currentUl = e.target.parentNode.parentNode.children[1],
+          currentOffset = parseInt(currentUl.style.left),
+          maximumOffset = -(self.sliderWidth * currentUl.children.length - self.sliderWidth);
+      console.log(currentOffset);
+      if (currentOffset === maximumOffset) {
+        currentUl.style.left = 0;
+      } else {
+        currentOffset -= self.sliderWidth;
+        currentUl.style.left = currentOffset + 'px';
+      };
   };
 
   self.init = function () {
@@ -36,22 +34,28 @@ function Slider() {
         self.nexts = document.querySelectorAll('.slider__next');
         self.sliderWidth = self.sliders[0].clientWidth || self.sliders[0].offsetWidth;
 
-        sliderWrappers.forEach(function (item, i, arr) {
-          item.clientWidth = self.sliderWidth * item.childNodes.length;
-        });
+        for (var i = 0; i < self.sliderWrappers.length; i++) {
+            self.sliderWrappers[i].style.width = (self.sliderWidth * self.sliderWrappers[i].children.length) +'px';
+            self.sliderWrappers[i].style.left = 0 + 'px';
+        };
 
-        prevs.forEach(function (item, i, arr) {
-          item.removeEventListener('click', self.swipeLeft);
-          item.addEventListener('click', self.swipeLeft);
-        });
+        for (var i = 0; i < self.prevs.length; i++) {
+          self.prevs[i].addEventListener('click', self.swipeLeft);
+        };
 
-        nexts.forEach(function (item, i, arr) {
-          item.removeEventListener('click', self.swipeRight);
-          item.addEventListener('click', self.swipeRight);
-        });
+        for (var i = 0; i < self.nexts.length; i++) {
+          self.nexts[i].addEventListener('click', self.swipeRight);
+        };
+
   };
-
 };
 
-var sliders = new Slider;
-    sliders.init();
+var sliders;
+
+window.addEventListener('resize', function(event){
+  sliders.sliderWidth = sliders.sliders[0].clientWidth || sliders.sliders[0].offsetWidth;
+  for (var i = 0; i < sliders.sliderWrappers.length; i++) {
+      sliders.sliderWrappers[i].style.width = (sliders.sliderWidth * sliders.sliderWrappers[i].children.length) +'px';
+  };
+  console.log('slider size = ', sliders.sliderWidth);
+});

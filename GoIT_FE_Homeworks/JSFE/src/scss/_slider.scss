@@ -6,6 +6,11 @@ $sliderHeight: 400px;
   overflow: hidden;
   max-width: $sliderMaxWidth;
   height: $sliderHeight;
+  &__wrapper {
+    position: absolute;
+    left: 0;
+    transition: all 1s;
+  }
   &__slide{
     position: relative;
     float: left;
@@ -13,9 +18,19 @@ $sliderHeight: 400px;
     height: $sliderHeight;
   }
   &__prev {
+    z-index: 3;
+    cursor: pointer;
     position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #blue;
   }
   &__next {
+    z-index: 3;
+    cursor: pointer;
     position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #blue;
   }
 }

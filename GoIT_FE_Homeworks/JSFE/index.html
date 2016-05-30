@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Urlaubsglück</title>
+  <link rel="stylesheet" href="build/css/style.css" media="screen" title="no title" charset="utf-8">
 
+  <script src="src/js/masonry.pkgd.min.js" charset="utf-8"></script>
+  <script src="src/js/slider.js" charset="utf-8"></script>
+  <script src="src/js/script.js" charset="utf-8"></script>
 <!--[if lt IE 9]>
    <script>
       document.createElement('header');
@@ -17,9 +21,10 @@
 </head>
 
 <body>
-  <div class="wrapper">
+
 
     <header>
+    <div class="wrapper">
       <div class="header__login-buttons">
         <a href="#" class="header__login">Log In</a>
         <a href="#" class="header__signup">Sign Up</a>
@@ -29,21 +34,20 @@
       <h2 class="header__subtitle">SHARE YOUR<br>HOLIDAY DREAMS</h2>
       <h3 class="header__subtitle-second-line">And find the perfect partner to fullfill it</h3>
       <a href="#" class="header__findpartner">Find your holiday partner</a>
+    </div>
     </header>
+
+<div class="wrapper">
 
     <section class="howItWorks">
       <h1 class="hiw__title">How Urlaubsglück works?</h1>
-<!-- https://habrahabr.ru/post/252075/ -->
-<!-- https://codepen.io/dudleystorey/pen/ehKpi -->
-<!-- http://codepen.io/AMKohn/pen/EKJHf -->
-
 
       <div class="slider slider1">
         <div class="slider__controls">
           <img src="img/la.png" class="slider__prev" alt="swipe left" />
           <img src="img/ra.png" class="slider__next" alt="swipe right" />
         </div>
-        <ul class="slider__wrapper">
+        <ul class="slider__wrapper clearfix">
           <li class="slider__slide">
               <h2 class="slider__number">STEP 1</h2>
               <h3 class="slider__title">Sed leo enim, condimentum</h3>
@@ -63,7 +67,7 @@
           <img src="img/la.png" class="slider__prev" alt="swipe left" />
           <img src="img/ra.png" class="slider__next" alt="swipe right" />
         </div>
-        <ul class="slider__wrapper">
+        <ul class="slider__wrapper clearfix">
           <li class="slider__slide">
               <h2 class="slider__number">STEP 2</h2>
               <h3 class="slider__title">Sed leo enim, condimentum</h3>
@@ -83,7 +87,7 @@
           <img src="img/la.png" class="slider__prev" alt="swipe left" />
           <img src="img/ra.png" class="slider__next" alt="swipe right" />
         </div>
-        <ul class="slider__wrapper">
+        <ul class="slider__wrapper clearfix">
           <li class="slider__slide">
               <h2 class="slider__number">STEP 3</h2>
               <h3 class="slider__title">Sed leo enim, condimentum</h3>
@@ -103,42 +107,90 @@
       <h1 class="peoples__title">Meet a partner for your best holiday</h1>
       <div class="peoples__partner">
         <div class="peoples__portrait-wrapper">
-          <div class="peoples__portrait-hider"><img src="" alt="" class="peoples__portrait"></div>
-          <img src="" alt="" class="peoples__portrait-icon">
+          <div class="peoples__portrait-hider"><img src="img/1.png" alt="" class="peoples__portrait"></div>
+          <img src="img/tv.png" alt="" class="peoples__portrait-icon">
         </div>
-        <h2 class="peoples__name"></h2>
-        <p class="peoples__about"></p>
+        <h2 class="peoples__name">Bradley Hunter</h2>
+        <p class="peoples__about">Based in Chicago. I love playing tennis and loud music.</p>
       </div>
 
       <div class="peoples__partner">
         <div class="peoples__portrait-wrapper">
-          <div class="peoples__portrait-hider"><img src="" alt="" class="peoples__portrait"></div>
-          <img src="" alt="" class="peoples__portrait-icon">
+          <div class="peoples__portrait-hider"><img src="img/2.png" alt="" class="peoples__portrait"></div>
+          <img src="img/coffee.png" alt="" class="peoples__portrait-icon">
         </div>
-        <h2 class="peoples__name"></h2>
-        <p class="peoples__about"></p>
+        <h2 class="peoples__name">Heather Walker</h2>
+        <p class="peoples__about">I'm a happy person that loves cats and climbing on mountains.</p>
       </div>
 
       <div class="peoples__partner">
         <div class="peoples__portrait-wrapper">
-          <div class="peoples__portrait-hider"><img src="" alt="" class="peoples__portrait"></div>
-          <img src="" alt="" class="peoples__portrait-icon">
+          <div class="peoples__portrait-hider"><img src="img/3.png" alt="" class="peoples__portrait"></div>
+          <img src="img/chemistry.png" alt="" class="peoples__portrait-icon">
         </div>
-        <h2 class="peoples__name"></h2>
-        <p class="peoples__about"></p>
+        <h2 class="peoples__name">Lucas Marsha</h2>
+        <p class="peoples__about">I get my inspiration from nature and objects around me. I have a passion to colours, typography and skateboards.</p>
       </div>
 
       <div class="peoples__partner">
         <div class="peoples__portrait-wrapper">
-          <div class="peoples__portrait-hider"><img src="" alt="" class="peoples__portrait"></div>
-          <img src="" alt="" class="peoples__portrait-icon">
+          <div class="peoples__portrait-hider"><img src="img/4.png" alt="" class="peoples__portrait"></div>
+          <img src="img/airplane.png" alt="" class="peoples__portrait-icon">
         </div>
-        <h2 class="peoples__name"></h2>
-        <p class="peoples__about"></p>
+        <h2 class="peoples__name">Bradley Hunter</h2>
+        <p class="peoples__about">Based in Chicago. I love playing tennis and loud music.</p>
+      </div>
+
+      <a href="#">See other partners</a>
+    </section>
+    <section class="discover">
+      <h2 class="discover__title">Discover holiday activity ideas</h2>
+      <div class="grid clearfix">
+        <div class="grid-sizer"></div>
+
+        <div class="grid-item g-1-1"><span class="grid-item__text"></span></div>
+        <div class="grid-item g-1-2"><span class="grid-item__text"></span></div>
+        <div class="grid-item g-1-3"><span class="grid-item__text"></span></div>
+
+        <div class="grid-item g-2-1"><span class="grid-item__text"></span></div>
+        <div class="grid-item grid-item--width2 g-2-2"><span class="grid-item__text"></span></div>
+
+        <div class="grid-item grid-item--width2 g-3-1"><span class="grid-item__text"></span></div>
+        <div class="grid-item g-3-2"><span class="grid-item__text"></span></div>
+      </div>
+
+      <div class="discover__newImages">
+        <h2 class="discover__title">Discover holiday activity ideas</h2>
+        <p class="discover__text">Hi! What are your holiday interests?</p>
+        <form class="discover__form" action="#" method="get">
+          <input type="text" class="discover__tag" id="searchTag" placeholder="Enter your interests">
+          <input type="submit" class="discover__submit">
+        </form>
       </div>
     </section>
 
-
   </div>
+
+    <footer>
+      <div class="wrapper">
+        <h1 class="footer__title">URLAUBSGLÜCK</h1>
+        <ul class="list">
+          <h2 class="list__title">Company</h2>
+          <li class="list__item"><a href="#" class="list__link">About</a></li>
+          <li class="list__item"><a href="#" class="list__link">Contacts</a></li>
+          <li class="list__item"><a href="#" class="list__link">Press</a></li>
+          <li class="list__item"><a href="#" class="list__link">Blog</a></li>
+        </ul>
+        <ul class="list">
+          <h2 class="list__title">Partners</h2>
+        </ul>
+
+        <div class="designed">
+          <span class="designedby">DESIGNED BY</span>
+          <img src="img/areto.png" alt="">
+        </div>
+      </div>
+    </footer>
+
 </body>
 </html>
