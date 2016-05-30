@@ -1,3 +1,134 @@
+
+//variables
+$small: 320px;
+$medium: 768px;
+$large: 940px;
+
+$red: #ff4e50;
+$black: #333333;
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 9999px;
+  z-index: 999;
+  background-image: url('../../URLAUBSGLÜCK_Landing_Mobile.jpg');
+  background-size: 320px auto;
+  opacity: 0.5;
+}
+
+//Media mixin
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media (max-width: $small) { @content; }
+  }
+  @else if $media == tablet {
+    @media (min-width: $small + 1) and (max-width: $medium) { @content; }
+  }
+  @else if $media == desktop {
+    @media (min-width: $large + 1) { @content; }
+  }
+  @else if $media == tab&desk {
+    @media (min-width: $small + 1) { @content; }
+  }
+}
+
+@import "fonts";
 @import "reset";
 @import "slider";
-@import "masonry"
+@import "masonry";
+
+//Styles
+
+.wrapper {
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: $small - 20;
+
+  @include respond-to(tablet) { max-width: $medium - 20; }
+  @include respond-to(desktop) { max-width: $large; }
+}
+
+//header
+header {
+  width: 100%;
+  height: 540px;
+  background-image: url('../../img/logo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -405px 0;
+
+  @include respond-to(tab&desk) { height: 700px; }
+}
+.header {
+  &__login-buttons {
+    padding-top: 19px;
+    font-size: 14px;
+    line-height: 1.2;
+    max-width: 160px;
+    margin: 0 auto;
+  }
+  &__login {
+    color: #fff;
+    float: left;
+    text-decoration: none;
+    padding: 10px;
+  }
+  &__signup {
+    color: #fff;
+    float: right;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    padding: 8px 15px 8px 15px;
+  }
+  &__title {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 115px;
+    text-align: center;
+  }
+  &__subtitle {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+    &-second-line {
+      color: #fff;
+      font-family: Roboto, sans-serif;
+      font-weight: 100;
+      text-align: center;
+      display: block;
+      max-width: 240px;
+      margin: 3px auto;
+    }
+  }
+  &__findpartner {
+    color: #fff;
+    font-size: 14px;
+    background-color: $red;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: 12px auto 0;
+    max-width: 92%;
+    padding: 10px;
+    border-radius: 25px;
+  }
+}
+
+//how it works section
+.howItWorks {
+  padding-top: 34px;
+}
+.hiw {
+  &__title {
+    color: $black;
+    font-size: 22px;
+    text-align: center;
+    padding-bottom: 5px;
+  }
+}

@@ -1,7 +1,10 @@
 $sliderMaxWidth: 300px;
-$sliderHeight: 400px;
+$sliderHeight: 240px;
+
+
 
 .slider {
+  margin-top: 10px;
   position: relative;
   overflow: hidden;
   max-width: $sliderMaxWidth;
@@ -11,13 +14,23 @@ $sliderHeight: 400px;
     left: 0;
     transition: all 1s;
   }
+  &__gradient {
+    position: relative;
+    z-index: 2;
+    height: inherit;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0));
+    border-radius: 5px
+  }
   &__slide{
     position: relative;
     float: left;
     max-width: $sliderMaxWidth;
     height: $sliderHeight;
+    border-radius: 5px;
+    z-index: 1;
   }
   &__prev {
+    display: none;
     z-index: 3;
     cursor: pointer;
     position: absolute;
@@ -26,6 +39,7 @@ $sliderHeight: 400px;
     background-color: #blue;
   }
   &__next {
+    display: none;
     z-index: 3;
     cursor: pointer;
     position: absolute;
@@ -33,4 +47,52 @@ $sliderHeight: 400px;
     top: 0;
     background-color: #blue;
   }
+  &__number {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 300;
+    color: #fff;
+    background-color: $red;
+    border-radius: 25px;
+    padding: 3px 15px;
+    letter-spacing: 1.5px;
+    margin-top: 68px;
+    margin-left: 20px;
+  }
+  &__title {
+    margin-left: 20px;
+    margin-top: 15px;
+    color: #fff;
+    font-size: 24px;
+  }
+  &__text {
+    color: #ccc;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 15px;
+    line-height: 1.2;
+  }
+}
+.slider1 .slider__slide {
+  background-image: url('../../img/step1.jpg');
+  background-repeat: no-repeat;
+  background-size: auto 120%;
+  background-position: -77px -30px;
+}
+.slider2 .slider__slide {
+  background-repeat: no-repeat;
+  background-size: auto 115%;
+  background-position: -34px -25px;
+  background-image: url('../../img/step2.jpg');
+  .slider__number {
+    margin-top: 98px;
+  }
+}
+.slider3 .slider__slide {
+  background-repeat: no-repeat;
+  background-size: auto 120%;
+  background-position: -66px -30px;
+  background-image: url('../../img/step3.jpg');
 }
