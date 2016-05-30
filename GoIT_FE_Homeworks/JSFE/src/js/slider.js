@@ -40,11 +40,19 @@ function Slider() {
         };
 
         for (var i = 0; i < self.prevs.length; i++) {
-          self.prevs[i].addEventListener('click', self.swipeLeft);
+          if (self.prevs[i].addEventListener) {
+            self.prevs[i].addEventListener('click', self.swipeLeft);
+          } else {
+            self.prevs[i].attachEvent('onclick', self.swipeLeft);
+          };
         };
 
         for (var i = 0; i < self.nexts.length; i++) {
-          self.nexts[i].addEventListener('click', self.swipeRight);
+          if (self.prevs[i].addEventListener) {
+            self.prevs[i].addEventListener('click', self.swipeRight);
+          } else {
+            self.prevs[i].attachEvent('onclick', self.swipeRight);
+          };
         };
 
   };
@@ -52,10 +60,16 @@ function Slider() {
 
 var sliders;
 
-window.addEventListener('resize', function(event){
+if (window.addEventListener) {
+  window.addEventListener('resize', changeWidth);
+} else {
+  window.attachEvent('onresize', changeWidth);
+};
+
+function changeWidth(event) {
   sliders.sliderWidth = sliders.sliders[0].clientWidth || sliders.sliders[0].offsetWidth;
   for (var i = 0; i < sliders.sliderWrappers.length; i++) {
       sliders.sliderWrappers[i].style.width = (sliders.sliderWidth * sliders.sliderWrappers[i].children.length) +'px';
   };
   console.log('slider size = ', sliders.sliderWidth);
-});
+};

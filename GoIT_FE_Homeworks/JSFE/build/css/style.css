@@ -9,6 +9,7 @@ body::after {
   z-index: 999;
   background-image: url("../../URLAUBSGLÜCK_Landing_Mobile.jpg");
   background-size: 320px auto;
+  background-repeat: no-repeat;
   opacity: 0.5; }
 
 @font-face {
@@ -236,3 +237,61 @@ header {
   font-size: 22px;
   text-align: center;
   padding-bottom: 5px; }
+
+.peoples {
+  padding-top: 33px; }
+  .peoples__title {
+    font-size: 21.98px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 14px; }
+  .peoples__portrait-wrapper {
+    position: relative;
+    width: 122px;
+    margin: 0 auto; }
+  .peoples__portrait-hider {
+    text-align: center;
+    border-radius: 100%;
+    overflow: hidden;
+    height: 122px;
+    width: 122px; }
+  .peoples__portrait-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+  .peoples__name {
+    font-size: 14px;
+    color: #333333;
+    text-align: center;
+    margin-top: 15px; }
+  .peoples__about {
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    color: #666;
+    text-align: center;
+    display: block;
+    max-width: 230px;
+    margin: 10px auto 0; }
+  .peoples__partner {
+    margin-bottom: 25px; }
+
+#other-partners {
+  color: #ff4e50;
+  font-size: 14px;
+  border: 2px solid #ff4e50;
+  border-radius: 25px;
+  margin: 0 auto;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  width: 92%;
+  padding: 8px 0; }
+
+.discover {
+  padding-top: 34px; }
+  .discover__title {
+    font-size: 22px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 15px; }

@@ -1,4 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
+if (document.addEventListener) {
+  document.addEventListener("DOMContentLoaded", load);
+} else {
+  document.attachEvent('onload', load)
+};
+
+function load() {
   sliders = new Slider;
   sliders.init();
 
@@ -9,8 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   var form = document.querySelector('.discover__form');
-  form.addEventListener('submit', search);
-});
+  if (form.addEventListener) {
+    form.addEventListener('submit', search);
+  } else {
+    form.attachEvent('onsubmit', search);
+  };
+
+};
 
 function getXmlHttp(){
 var xmlhttp;
@@ -33,7 +44,7 @@ function search(e) {
   e.preventDefault();
   var tag = document.getElementById('searchTag').value;
 
-  var xmlhttp = getXmlHttp()
+  var xmlhttp = getXmlHttp();
   xmlhttp.open('GET', 'http://api.pixplorer.co.uk/image?word='+ tag +'&amount=7&size=tb', true);
   xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4) {
