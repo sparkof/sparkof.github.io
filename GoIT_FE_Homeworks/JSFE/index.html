@@ -6,11 +6,12 @@
   <title>Urlaubsglück</title>
   <link rel="stylesheet" href="build/css/style.css" media="screen" title="no title" charset="utf-8">
 
-  <script src="src/js/respond.js" charset="utf-8"></script>
   <script src="src/js/masonry.pkgd.min.js" charset="utf-8"></script>
   <script src="src/js/slider.js" charset="utf-8"></script>
   <script src="src/js/script.js" charset="utf-8"></script>
+
 <!--[if lt IE 9]>
+<script src="src/js/respond.js" charset="utf-8"></script>
    <script>
       document.createElement('header');
       document.createElement('nav');
@@ -178,7 +179,7 @@
         <p class="discover__text">Hi! What are your holiday interests?</p>
         <form class="discover__form" action="#" method="get">
           <input type="text" class="discover__tag" id="searchTag" placeholder="Enter your interests">
-          <input type="submit" class="discover__submit" value="Search partners">
+          <input type="button" class="discover__submit" value="Search partners">
         </form>
       </div>
     </section>
@@ -188,7 +189,7 @@
     <footer>
       <div class="wrapper">
         <h1 class="footer__title">URLAUBSGLÜCK</h1>
-        <ul class="list">
+        <ul class="list clearfix">
           <h2 class="list__title">Company</h2>
           <li class="list__item"><a href="#" class="list__link">About</a></li>
           <li class="list__item"><a href="#" class="list__link">Contacts</a></li>

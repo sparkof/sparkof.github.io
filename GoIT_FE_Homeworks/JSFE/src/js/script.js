@@ -1,10 +1,7 @@
-if (document.addEventListener) {
-  document.addEventListener("DOMContentLoaded", load);
-} else {
-  document.attachEvent('onload', load)
-};
+
 
 function load() {
+
   sliders = new Slider;
   sliders.init();
 
@@ -14,14 +11,54 @@ function load() {
     percentPosition: true
   });
 
-  var form = document.querySelector('.discover__form');
+  var form = document.querySelector('.discover__submit');
+
   if (form.addEventListener) {
-    form.addEventListener('submit', search);
+    form.addEventListener('click', crossDomainAjax);
   } else {
-    form.attachEvent('onsubmit', search);
+    form.onclick = crossDomainAjax;
   };
 
 };
+
+
+function crossDomainAjax(event) {
+  var tag = document.getElementById('searchTag').value;
+
+  if ('XDomainRequest' in window && window.XDomainRequest !== null) {
+    var xdr = new XDomainRequest(); // Use Microsoft XDR
+        xdr.open('GET', 'http://api.pixplorer.co.uk/image?word='+ tag +'&amount=7&size=tb', true);
+        xdr.onload = function () {
+            pasteResult(xdr.responseText);
+        };
+        xdr.send();
+
+    } else {
+      var xmlhttp = getXmlHttp();
+      xmlhttp.open('GET', 'http://api.pixplorer.co.uk/image?word='+ tag +'&amount=7&size=tb', true);
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4) {
+           if(xmlhttp.status == 200) {
+             pasteResult(xmlhttp.responseText);
+           };
+        };
+      };
+      xmlhttp.send(null);
+    };
+};
+
+function pasteResult(response) {
+  var searchResponse = JSON.parse(response);
+  alert(response);
+  // console.log(searchResponse);
+
+  var gridElements = document.querySelectorAll('.grid-item');
+
+  for (var i = 0; i < gridElements.length; i++) {
+      gridElements[i].style.backgroundImage = 'url(' + searchResponse.images[i].imageurl + ')';
+      gridElements[i].children[0].innerHTML = searchResponse.images[i].word;
+  }
+}
 
 function getXmlHttp(){
 var xmlhttp;
@@ -40,32 +77,9 @@ if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
 return xmlhttp;
 };
 
-function search(e) {
-  e.preventDefault();
-  var tag = document.getElementById('searchTag').value;
 
-  var xmlhttp = getXmlHttp();
-  xmlhttp.open('GET', 'http://api.pixplorer.co.uk/image?word='+ tag +'&amount=7&size=tb', true);
-  xmlhttp.onreadystatechange = function() {
-    if (xmlhttp.readyState == 4) {
-       if(xmlhttp.status == 200) {
-         pasteResult(xmlhttp.responseText);
-           }
-    }
-  };
-  xmlhttp.send(null);
+if (document.addEventListener) {
+  document.addEventListener("DOMContentLoaded", load);
+} else {
+  document.attachEvent('onload', load)
 };
-
-function pasteResult(response) {
-  var searchResponse = JSON.parse(response);
-  console.log(searchResponse);
-
-  var gridElements = document.querySelectorAll('.grid-item');
-
-
-  for (var i = 0; i < gridElements.length; i++) {
-      gridElements[i].style.background = 'url(' + searchResponse.images[i].imageurl + ') no-repeat';
-      gridElements[i].style.backgroundSize = 'contain';
-      gridElements[i].children[0].innerHTML = searchResponse.images[i].word;
-  }
-}
