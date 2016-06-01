@@ -1,4 +1,4 @@
-
+//загрузка происходит в html, обработчик события не вешался на DOMContentLoaded, в связи его кривой работой в ie8-
 
 function load() {
 
@@ -8,7 +8,8 @@ function load() {
   var msnry = new Masonry( '.grid', {
     columnWidth: '.grid-sizer',
     itemSelector: '.grid-item',
-    percentPosition: true
+    percentPosition: true,
+    gutter: 20
   });
 
   var form = document.querySelector('.discover__submit');
@@ -49,7 +50,6 @@ function crossDomainAjax(event) {
 
 function pasteResult(response) {
   var searchResponse = JSON.parse(response);
-  alert(response);
   // console.log(searchResponse);
 
   var gridElements = document.querySelectorAll('.grid-item');
@@ -78,8 +78,8 @@ return xmlhttp;
 };
 
 
-if (document.addEventListener) {
-  document.addEventListener("DOMContentLoaded", load);
-} else {
-  document.attachEvent('onload', load)
-};
+// if (document.addEventListener) {
+//   document.addEventListener("DOMContentLoaded", load);
+// } else {
+//   document.attachEvent('onload', load)
+// };

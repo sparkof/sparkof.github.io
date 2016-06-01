@@ -1,14 +1,33 @@
 $sliderMaxWidth: 300px;
 $sliderHeight: 240px;
+$sliderTabDeskHeight: 400px;
 
-
-
+.margin-div {
+  @include respond-to(tab&desk) {
+    width: 2.75%;
+    float: left;
+    max-width: 20px;
+    height: 10px;
+   }
+  @include respond-to(desktop) {  width: 2%; }
+}
 .slider {
   margin-top: 10px;
   position: relative;
   overflow: hidden;
   max-width: $sliderMaxWidth;
   height: $sliderHeight;
+  border-radius: 5px;
+  @include respond-to(tab&desk) {
+    width: 31.5%;
+    float: left;
+    height: $sliderTabDeskHeight;
+   }
+   @include respond-to(tablet) { max-width: 236px; }
+   @include respond-to(desktop) {  width: 32%; }
+  &:last-of-type{
+    margin-right: 0;
+  }
   &__wrapper {
     position: absolute;
     left: 0;
@@ -28,6 +47,8 @@ $sliderHeight: 240px;
     height: $sliderHeight;
     border-radius: 5px;
     z-index: 1;
+    @include respond-to(tab&desk) { height: $sliderTabDeskHeight; }
+    @include respond-to(tablet) { max-width: 236px; }
   }
   &__prev {
     display: none;
@@ -36,7 +57,7 @@ $sliderHeight: 240px;
     position: absolute;
     left: 0;
     top: 0;
-    background-color: #blue;
+    @include respond-to(tab&desk) { display: block; }
   }
   &__next {
     display: none;
@@ -45,7 +66,7 @@ $sliderHeight: 240px;
     position: absolute;
     right: 0;
     top: 0;
-    background-color: #blue;
+    @include respond-to(tab&desk) { display: block; }
   }
   &__number {
     display: inline-block;

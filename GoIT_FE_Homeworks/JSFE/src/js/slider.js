@@ -14,11 +14,10 @@ function Slider() {
   };
 
   self.swipeRight = function (e) {
-    console.log(e);
       var currentUl = e.target.parentNode.parentNode.children[1],
           currentOffset = parseInt(currentUl.style.left),
           maximumOffset = -(self.sliderWidth * currentUl.children.length - self.sliderWidth);
-      console.log(currentOffset);
+      console.log(currentUl, currentOffset, maximumOffset);
       if (currentOffset === maximumOffset) {
         currentUl.style.left = 0;
       } else {
@@ -32,12 +31,17 @@ function Slider() {
         self.sliderWrappers = document.querySelectorAll('.slider__wrapper');
         self.prevs = document.querySelectorAll('.slider__prev');
         self.nexts = document.querySelectorAll('.slider__next');
+        self.slides = document.querySelectorAll('.slider__slide');
         self.sliderWidth = self.sliders[0].clientWidth || self.sliders[0].offsetWidth;
 
         for (var i = 0; i < self.sliderWrappers.length; i++) {
             self.sliderWrappers[i].style.width = (self.sliderWidth * self.sliderWrappers[i].children.length) +'px';
             self.sliderWrappers[i].style.left = 0 + 'px';
         };
+
+        for (var i = 0; i < self.slides.length; i++) {
+            self.slides[i].style.width = self.sliderWidth + 'px';
+        }
 
         for (var i = 0; i < self.prevs.length; i++) {
           if (self.prevs[i].addEventListener) {
@@ -48,10 +52,10 @@ function Slider() {
         };
 
         for (var i = 0; i < self.nexts.length; i++) {
-          if (self.prevs[i].addEventListener) {
-            self.prevs[i].addEventListener('click', self.swipeRight);
+          if (self.nexts[i].addEventListener) {
+            self.nexts[i].addEventListener('click', self.swipeRight);
           } else {
-            self.prevs[i].attachEvent('onclick', self.swipeRight);
+            self.nexts[i].attachEvent('onclick', self.swipeRight);
           };
         };
 
@@ -71,5 +75,8 @@ function changeWidth(event) {
   for (var i = 0; i < sliders.sliderWrappers.length; i++) {
       sliders.sliderWrappers[i].style.width = (sliders.sliderWidth * sliders.sliderWrappers[i].children.length) +'px';
   };
+  for (var i = 0; i < sliders.slides.length; i++) {
+      sliders.slides[i].style.width = sliders.sliderWidth + 'px';
+  }
   console.log('slider size = ', sliders.sliderWidth);
 };

@@ -4,11 +4,11 @@ body::after {
   position: absolute;
   top: 0;
   left: 0;
-  width: 320px;
+  width: 768px;
   height: 9999px;
   z-index: 999;
-  background-image: url("../../URLAUBSGLÜCK_Landing_Mobile.jpg");
-  background-size: 320px auto;
+  background-image: url("../../URLAUBSGLÜCK_Landing_tablet.jpg");
+  background-size: 768px auto;
   background-repeat: no-repeat;
   opacity: 0.5; }
 
@@ -50,12 +50,37 @@ header, nav, section, article, aside, footer {
   visibility: hidden;
   height: 0; }
 
+@media (min-width: 321px) {
+  .margin-div {
+    width: 2.75%;
+    float: left;
+    max-width: 20px;
+    height: 10px; } }
+
+@media (min-width: 769px) {
+  .margin-div {
+    width: 2%; } }
+
 .slider {
   margin-top: 10px;
   position: relative;
   overflow: hidden;
   max-width: 300px;
-  height: 240px; }
+  height: 240px;
+  border-radius: 5px; }
+  @media (min-width: 321px) {
+    .slider {
+      width: 31.5%;
+      float: left;
+      height: 400px; } }
+  @media (min-width: 321px) and (max-width: 768px) {
+    .slider {
+      max-width: 236px; } }
+  @media (min-width: 769px) {
+    .slider {
+      width: 32%; } }
+  .slider:last-of-type {
+    margin-right: 0; }
   .slider__wrapper {
     position: absolute;
     left: 0;
@@ -73,22 +98,32 @@ header, nav, section, article, aside, footer {
     height: 240px;
     border-radius: 5px;
     z-index: 1; }
+    @media (min-width: 321px) {
+      .slider__slide {
+        height: 400px; } }
+    @media (min-width: 321px) and (max-width: 768px) {
+      .slider__slide {
+        max-width: 236px; } }
   .slider__prev {
     display: none;
     z-index: 3;
     cursor: pointer;
     position: absolute;
     left: 0;
-    top: 0;
-    background-color: #blue; }
+    top: 0; }
+    @media (min-width: 321px) {
+      .slider__prev {
+        display: block; } }
   .slider__next {
     display: none;
     z-index: 3;
     cursor: pointer;
     position: absolute;
     right: 0;
-    top: 0;
-    background-color: #blue; }
+    top: 0; }
+    @media (min-width: 321px) {
+      .slider__next {
+        display: block; } }
   .slider__number {
     display: inline-block;
     font-size: 10px;
@@ -179,6 +214,12 @@ header {
   @media (min-width: 321px) {
     header {
       height: 700px; } }
+  @media (min-width: 321px) and (max-width: 768px) {
+    header {
+      background-position: -337px 0; } }
+  @media (min-width: 769px) {
+    header {
+      background-position: 0 0; } }
 
 .header__login-buttons {
   padding-top: 19px;
@@ -186,6 +227,13 @@ header {
   line-height: 1.2;
   max-width: 160px;
   margin: 0 auto; }
+  @media (min-width: 321px) {
+    .header__login-buttons {
+      float: right;
+      padding-top: 38px;
+      margin-right: 41px;
+      max-width: 180px;
+      width: 162px; } }
 
 .header__login {
   color: #fff;
@@ -206,12 +254,21 @@ header {
   font-size: 20px;
   margin-top: 115px;
   text-align: center; }
+  @media (min-width: 321px) {
+    .header__title {
+      float: left;
+      margin-top: 46px;
+      margin-left: 40px; } }
 
 .header__subtitle {
   color: #fff;
   font-size: 30px;
   text-align: center;
   margin-top: 30px; }
+  @media (min-width: 321px) {
+    .header__subtitle {
+      font-size: 52px;
+      margin-top: 140px; } }
   .header__subtitle-second-line {
     color: #fff;
     font-family: Roboto, sans-serif;
@@ -220,6 +277,11 @@ header {
     display: block;
     max-width: 240px;
     margin: 3px auto; }
+    @media (min-width: 321px) {
+      .header__subtitle-second-line {
+        font-size: 24px;
+        max-width: 100%;
+        margin: 22px auto 0; } }
 
 .header__findpartner {
   color: #fff;
@@ -232,15 +294,25 @@ header {
   max-width: 92%;
   padding: 10px;
   border-radius: 25px; }
+  @media (min-width: 321px) {
+    .header__findpartner {
+      max-width: 225px;
+      margin: 32px auto 0; } }
 
 .howItWorks {
   padding-top: 34px; }
+  @media (min-width: 321px) {
+    .howItWorks {
+      padding-top: 95px; } }
 
 .hiw__title {
   color: #333333;
   font-size: 22px;
   text-align: center;
   padding-bottom: 5px; }
+  @media (min-width: 321px) {
+    .hiw__title {
+      padding-bottom: 23px; } }
 
 .peoples {
   padding-top: 33px; }
@@ -327,6 +399,7 @@ header {
     width: 95%;
     background-color: #ff4e50;
     color: #fff;
+    border: none;
     border-radius: 25px;
     height: 40px;
     font-size: 13.96px; }
