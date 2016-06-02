@@ -7,19 +7,19 @@ $large: 940px;
 $red: #ff4e50;
 $black: #333333;
 
-body::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 768px;
-  height: 9999px;
-  z-index: 999;
-  background-image: url('../../URLAUBSGLÜCK_Landing_tablet.jpg');
-  background-size: 768px auto;
-  background-repeat: no-repeat;
-  opacity: 0.5;
-}
+// body::after {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 768px;
+//   height: 9999px;
+//   z-index: 999;
+//   background-image: url('../../URLAUBSGLÜCK_Landing_tablet.jpg');
+//   background-size: 768px auto;
+//   background-repeat: no-repeat;
+//   opacity: 0.5;
+// }
 
 //Media mixin
 @mixin respond-to($media) {
@@ -170,11 +170,24 @@ header {
 //meet a partner
 .peoples {
   padding-top: 33px;
+  @include respond-to(tab&desk) {
+    padding-top: 96px;
+   }
+   .clearfix {
+     @include respond-to(tablet) {
+       margin: 0 auto;
+       width: 65%;
+       min-width: 485px;
+      }
+   }
   &__title {
     font-size: 21.98px;
     color: $black;
     text-align: center;
     margin-bottom: 14px;
+    @include respond-to(tab&desk) {
+      margin-bottom: 32px;
+     }
   }
   &__portrait-wrapper {
     position: relative;
@@ -211,6 +224,26 @@ header {
   }
   &__partner {
     margin-bottom: 25px;
+    @include respond-to(tab&desk) {
+      float: left;
+      margin-bottom: 54px;
+      margin-right: 5.3%;
+     }
+    @include respond-to(tablet) {
+      width: 47%;
+    }
+    &:nth-of-type(2n) {
+      @include respond-to(tablet) {
+        float: left;
+        margin-bottom: 54px;
+        margin-right: 0px;
+       }
+    }
+    &:nth-of-type(n+2) {
+      @include respond-to(tablet) {
+        margin-bottom: 0;
+       }
+    }
   }
 }
 #other-partners {
@@ -224,20 +257,34 @@ header {
   text-align: center;
   width: 92%;
   padding: 8px 0;
+  @include respond-to(tab&desk) {
+    margin-top: 33px;
+    max-width: 196px;
+   }
 }
 
 //discover holiday activity ideas
 .discover {
   padding-top: 34px;
   padding-bottom: 40px;
+  @include respond-to(tab&desk) {
+    padding-top: 96px;
+    padding-bottom: 100px;
+   }
   &__title {
     font-size: 22px;
     color: $black;
     text-align: center;
     margin-bottom: 13px;
+    @include respond-to(tab&desk) {
+      margin-bottom: 34px;
+     }
   }
   &__newImages {
     margin-top: 25px;
+    @include respond-to(tab&desk) {
+      margin-top: 75px;
+     }
   }
   &__text {
     font-family: Roboto, sans-serif;
@@ -249,6 +296,11 @@ header {
   }
   &__form {
     margin-top: 15px;
+    @include respond-to(tab&desk) {
+      display: block;
+      margin: 37px auto 0;
+      max-width: 410px;
+     }
   }
   &__tag {
     display: block;
@@ -259,6 +311,10 @@ header {
     font-family: Roboto, sans-serif;
     font-weight: 100;
     text-indent: 15px;
+    @include respond-to(tab&desk) {
+      max-width: 240px;
+      float: left;
+     }
   }
   &__submit {
     outline: none;
@@ -271,31 +327,60 @@ header {
     border-radius: 25px;
     height: 40px;
     font-size: 13.96px;
+    @include respond-to(tab&desk) {
+      max-width: 160px;
+      margin-top: 0;
+      float: right;
+     }
   }
 }
 footer {
   border-top: 4px solid $red;
   padding-top: 16px;
+  @include respond-to(tab&desk) {
+    padding-top: 35px;
+   }
 }
 .footer__title {
   display: block;
   font-size: 16px;
   color: $red;
   text-align: center;
+  @include respond-to(tab&desk) {
+    float: left;
+    margin-left: 30px;
+   }
 }
 .list {
   margin-top: 12px;
+  @include respond-to(tab&desk) {
+    float: left;
+    margin-top: 0;
+    margin-left: 90px;
+    margin-right: 14px;
+   }
   &__title {
     color: $black;
     display: block;
     text-align: center;
     font-size: 14px;
+    @include respond-to(tab&desk) {
+      margin-bottom: 12px;
+     }
   }
   &__item {
     float: left;
     margin-right: 13px;
+    @include respond-to(tab&desk) {
+      font-size: 14px;
+      float: none;
+      margin-bottom: 5px;
+     }
     &:first-of-type {
       margin-left: 52px;
+      @include respond-to(tab&desk) {
+        margin-left: 0px;
+       }
     }
   }
   &__link {
@@ -310,12 +395,21 @@ footer {
 .designed {
   margin-top: 15px;
   padding-bottom: 18px;
+  @include respond-to(tab&desk) {
+    margin-top: 3px;
+    max-width: 120px;
+    margin-right: 29px;
+    float: right;
+   }
   &by {
     display: block;
     font-size: 10px;
     color: #ccc;
     text-align: center;
     letter-spacing: 1.2px;
+    @include respond-to(tab&desk) {
+      margin-left: 28px;
+     }
   }
   img {
     display: block;

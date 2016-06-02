@@ -11,6 +11,9 @@
 .grid-sizer,
 .grid-item {
   width: 100%;
+  @include respond-to(tab&desk) {
+    width: 31.5%;
+  }
 }
 
 .grid-item {
@@ -21,11 +24,20 @@
   background-repeat: no-repeat;
   border-radius: 5px;
   margin-bottom: 10px;
+  @include respond-to(tablet) {
+    height: 310px;
+    margin-bottom: 20px;
+  }
   &__text {
     color: #fff;
     font-size: 22px;
     line-height: 120px;
     text-align: center;
     display: block;
+  }
+  &--width2 {
+    @include respond-to(tab&desk) {
+      width: 65.66%;
+    }
   }
 }
