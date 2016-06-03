@@ -24,16 +24,16 @@ body::after {
 //Media mixin
 @mixin respond-to($media) {
   @if $media == mobile {
-    @media (max-width: $small) { @content; }
+    @media (max-device-width: $small) { @content; }
   }
   @else if $media == tablet {
-    @media (min-width: $small + 1) and (max-width: $medium) { @content; }
+    @media (min-device-width: $small + 1) and (max-device-width: $medium) { @content; }
   }
   @else if $media == desktop {
-    @media (min-width: $medium + 1) { @content; }
+    @media (min-device-width: $medium + 1) { @content; }
   }
   @else if $media == tab&desk {
-    @media (min-width: $small + 1) { @content; }
+    @media (min-device-width: $small + 1) { @content; }
   }
 }
 
@@ -351,6 +351,7 @@ header {
   }
 }
 footer {
+  padding-bottom: 40px;
   border-top: 4px solid $red;
   padding-top: 16px;
   @include respond-to(tab&desk) {
