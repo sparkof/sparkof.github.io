@@ -14,6 +14,9 @@
   @include respond-to(tab&desk) {
     width: 31.5%;
   }
+  @include respond-to(desktop) {
+    width: 31.9%;
+  }
 }
 
 .grid-item {
@@ -24,7 +27,7 @@
   background-repeat: no-repeat;
   border-radius: 5px;
   margin-bottom: 10px;
-  @include respond-to(tablet) {
+  @include respond-to(tab&desk) {
     height: 310px;
     margin-bottom: 20px;
   }

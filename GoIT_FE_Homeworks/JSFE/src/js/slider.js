@@ -63,20 +63,3 @@ function Slider() {
 };
 
 var sliders;
-
-if (window.addEventListener) {
-  window.addEventListener('resize', changeWidth);
-} else {
-  window.attachEvent('onresize', changeWidth);
-};
-
-function changeWidth(event) {
-  sliders.sliderWidth = sliders.sliders[0].clientWidth || sliders.sliders[0].offsetWidth;
-  for (var i = 0; i < sliders.sliderWrappers.length; i++) {
-      sliders.sliderWrappers[i].style.width = (sliders.sliderWidth * sliders.sliderWrappers[i].children.length) +'px';
-  };
-  for (var i = 0; i < sliders.slides.length; i++) {
-      sliders.slides[i].style.width = sliders.sliderWidth + 'px';
-  }
-  console.log('slider size = ', sliders.sliderWidth);
-};

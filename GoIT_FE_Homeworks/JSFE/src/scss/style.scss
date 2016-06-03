@@ -7,19 +7,19 @@ $large: 940px;
 $red: #ff4e50;
 $black: #333333;
 
-// body::after {
-//   content: '';
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 768px;
-//   height: 9999px;
-//   z-index: 999;
-//   background-image: url('../../URLAUBSGLÜCK_Landing_tablet.jpg');
-//   background-size: 768px auto;
-//   background-repeat: no-repeat;
-//   opacity: 0.5;
-// }
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 9999px;
+  z-index: 999;
+  background-image: url('../../URLAUBSGLÜCK_Landing_desktop.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
 
 //Media mixin
 @mixin respond-to($media) {
@@ -64,7 +64,7 @@ header {
 
   @include respond-to(tab&desk) { height: 700px; }
   @include respond-to(tablet) {background-position: -337px 0;}
-  @include respond-to(desktop) {background-position: 0 0;}
+  @include respond-to(desktop) {background-position: -45px 0;}
 }
 .header {
   &__login-buttons {
@@ -79,6 +79,9 @@ header {
       margin-right: 41px;
       max-width: 180px;
       width: 162px;
+    }
+    @include respond-to(desktop) {
+      margin-right: 3px;
     }
   }
   &__login {
@@ -105,6 +108,9 @@ header {
       margin-top: 46px;
       margin-left: 40px;
      }
+    @include respond-to(desktop) {
+      margin-left: 0px;
+    }
   }
   &__subtitle {
     color: #fff;
@@ -232,6 +238,11 @@ header {
     @include respond-to(tablet) {
       width: 47%;
     }
+    @include respond-to(desktop) {
+      width: 23.5%;
+      margin-right: 2%;
+      margin-bottom: -2px;
+    }
     &:nth-of-type(2n) {
       @include respond-to(tablet) {
         float: left;
@@ -243,6 +254,11 @@ header {
       @include respond-to(tablet) {
         margin-bottom: 0;
        }
+    }
+    &:last-of-type {
+      @include respond-to(desktop) {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -339,7 +355,10 @@ footer {
   padding-top: 16px;
   @include respond-to(tab&desk) {
     padding-top: 35px;
-   }
+  }
+  @include respond-to(desktop) {
+    padding-top: 37px;
+  }
 }
 .footer__title {
   display: block;
@@ -349,7 +368,10 @@ footer {
   @include respond-to(tab&desk) {
     float: left;
     margin-left: 30px;
-   }
+  }
+  @include respond-to(desktop) {
+    margin-left: 0px;
+  }
 }
 .list {
   margin-top: 12px;
@@ -358,6 +380,10 @@ footer {
     margin-top: 0;
     margin-left: 90px;
     margin-right: 14px;
+   }
+   @include respond-to(desktop) {
+     margin-left: 105px;
+     margin-right: -13px;
    }
   &__title {
     color: $black;
@@ -400,6 +426,9 @@ footer {
     max-width: 120px;
     margin-right: 29px;
     float: right;
+   }
+   @include respond-to(desktop) {
+     margin-right: 0px;
    }
   &by {
     display: block;

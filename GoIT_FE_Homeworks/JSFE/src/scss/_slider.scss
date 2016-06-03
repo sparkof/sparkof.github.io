@@ -59,7 +59,7 @@ $sliderTabDeskHeight: 400px;
     top: 0;
     @include respond-to(tab&desk) { display: block; }
     @include respond-to(tablet) { top: 40px; left: 20px; }
-    // @include respond-to(desktop) { display: block; }
+    @include respond-to(desktop) { top: 153px; left: 21px; }
   }
   &__next {
     display: none;
@@ -70,7 +70,7 @@ $sliderTabDeskHeight: 400px;
     top: 0;
     @include respond-to(tab&desk) { display: block; }
     @include respond-to(tablet) { top: 40px; right: 20px; }
-    // @include respond-to(desktop) { display: block; }
+    @include respond-to(desktop) { top: 153px; right: 21px; }
   }
   &__number {
     display: inline-block;
@@ -85,6 +85,9 @@ $sliderTabDeskHeight: 400px;
     margin-left: 20px;
     @include respond-to(tab&desk) {
       margin-top: 212px;
+    }
+    @include respond-to(desktop) {
+      margin-top: 230px;
     }
   }
   &__title {
@@ -115,6 +118,10 @@ $sliderTabDeskHeight: 400px;
     background-size: auto 103%;
     background-position: -202px 0;
   }
+  @include respond-to(desktop) {
+    background-size: auto 108%;
+    background-position: -183px -15px;
+  }
 }
 .slider2 .slider__slide {
   background-repeat: no-repeat;
@@ -124,6 +131,10 @@ $sliderTabDeskHeight: 400px;
   @include respond-to(tablet) {
     background-size: auto 105%;
     background-position: -172px -6px;
+  }
+  @include respond-to(desktop) {
+    background-size: auto 110%;
+    background-position: -158px -14px;
   }
   .slider__number {
     margin-top: 98px;
@@ -140,5 +151,9 @@ $sliderTabDeskHeight: 400px;
   @include respond-to(tablet) {
     background-size: auto 105%;
     background-position: -191px -15px;
+  }
+  @include respond-to(desktop) {
+    background-size: auto 110%;
+    background-position: -179px -25px;
   }
 }
