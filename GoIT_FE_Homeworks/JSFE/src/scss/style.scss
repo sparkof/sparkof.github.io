@@ -7,33 +7,19 @@ $large: 940px;
 $red: #ff4e50;
 $black: #333333;
 
-body::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: auto;
-  height: 9999px;
-  z-index: 999;
-  background-image: url('../../URLAUBSGLÜCK_Landing_desktop.jpg');
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  opacity: 0.5;
-}
-
 //Media mixin
 @mixin respond-to($media) {
   @if $media == mobile {
     @media (max-device-width: $small) { @content; }
   }
   @else if $media == tablet {
-    @media (min-device-width: $small + 1) and (max-device-width: $medium) { @content; }
+    @media (min-device-width: $small + 160) and (max-device-width: $medium) { @content; }
   }
   @else if $media == desktop {
     @media (min-device-width: $medium + 1) { @content; }
   }
   @else if $media == tab&desk {
-    @media (min-device-width: $small + 1) { @content; }
+    @media (min-device-width: $small + 160) { @content; }
   }
 }
 
