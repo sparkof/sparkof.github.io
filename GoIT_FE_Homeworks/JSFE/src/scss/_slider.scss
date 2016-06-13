@@ -110,10 +110,13 @@ $sliderTabDeskHeight: 400px;
   }
 }
 .slider1 .slider__slide {
-  background-image: url('../../img/step1.jpg');
+  background-image: url('../img/step1.jpg');
   background-repeat: no-repeat;
   background-size: auto 120%;
   background-position: -77px -30px;
+  @include respond-to(retina) {
+    background-image: url('../img/step1@2x.jpg');
+  };
   @include respond-to(tablet) {
     background-size: auto 103%;
     background-position: -202px 0;
@@ -127,7 +130,10 @@ $sliderTabDeskHeight: 400px;
   background-repeat: no-repeat;
   background-size: auto 115%;
   background-position: -34px -25px;
-  background-image: url('../../img/step2.jpg');
+  background-image: url('../img/step2.jpg');
+  @include respond-to(retina) {
+    background-image: url('../img/step2@2x.jpg');
+  };
   @include respond-to(tablet) {
     background-size: auto 105%;
     background-position: -172px -6px;
@@ -147,7 +153,10 @@ $sliderTabDeskHeight: 400px;
   background-repeat: no-repeat;
   background-size: auto 120%;
   background-position: -66px -30px;
-  background-image: url('../../img/step3.jpg');
+  background-image: url('../img/step3.jpg');
+  @include respond-to(retina) {
+    background-image: url('../img/step3@2x.jpg');
+  };
   @include respond-to(tablet) {
     background-size: auto 105%;
     background-position: -191px -15px;

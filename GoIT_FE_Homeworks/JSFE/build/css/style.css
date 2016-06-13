@@ -1,3 +1,93 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
 @font-face {
   font-family: 'Monserrat';
   src: url("../../fonts/Montserrat-Bold.ttf") format("truetype");
@@ -162,10 +252,13 @@ header, nav, section, article, aside, footer {
         margin-top: 12px; } }
 
 .slider1 .slider__slide {
-  background-image: url("../../img/step1.jpg");
+  background-image: url("../img/step1.jpg");
   background-repeat: no-repeat;
   background-size: auto 120%;
   background-position: -77px -30px; }
+  @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+    .slider1 .slider__slide {
+      background-image: url("../img/step1@2x.jpg"); } }
   @media (min-device-width: 480px) and (max-device-width: 768px) {
     .slider1 .slider__slide {
       background-size: auto 103%;
@@ -179,7 +272,10 @@ header, nav, section, article, aside, footer {
   background-repeat: no-repeat;
   background-size: auto 115%;
   background-position: -34px -25px;
-  background-image: url("../../img/step2.jpg"); }
+  background-image: url("../img/step2.jpg"); }
+  @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+    .slider2 .slider__slide {
+      background-image: url("../img/step2@2x.jpg"); } }
   @media (min-device-width: 480px) and (max-device-width: 768px) {
     .slider2 .slider__slide {
       background-size: auto 105%;
@@ -198,7 +294,10 @@ header, nav, section, article, aside, footer {
   background-repeat: no-repeat;
   background-size: auto 120%;
   background-position: -66px -30px;
-  background-image: url("../../img/step3.jpg"); }
+  background-image: url("../img/step3.jpg"); }
+  @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+    .slider3 .slider__slide {
+      background-image: url("../img/step3@2x.jpg"); } }
   @media (min-device-width: 480px) and (max-device-width: 768px) {
     .slider3 .slider__slide {
       background-size: auto 105%;
@@ -243,6 +342,9 @@ header, nav, section, article, aside, footer {
     line-height: 120px;
     text-align: center;
     display: block; }
+    @media (min-device-width: 480px) {
+      .grid-item__text {
+        line-height: 310px; } }
   @media (min-device-width: 480px) {
     .grid-item--width2 {
       width: 65.66%; } }
@@ -261,10 +363,13 @@ header, nav, section, article, aside, footer {
 header {
   width: 100%;
   height: 540px;
-  background-image: url("../../img/logo.jpg");
+  background-image: url("../img/logo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -405px 0; }
+  @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+    header {
+      background-image: url("../img/logo@2x.jpg"); } }
   @media (min-device-width: 480px) {
     header {
       height: 700px; } }
@@ -392,6 +497,9 @@ header {
     @media (min-device-width: 480px) {
       .peoples__title {
         margin-bottom: 32px; } }
+  .peoples__portrait {
+    width: 122px;
+    height: 122px; }
   .peoples__portrait-wrapper {
     position: relative;
     width: 122px;
@@ -405,7 +513,53 @@ header {
   .peoples__portrait-icon {
     position: absolute;
     right: 0;
-    bottom: 0; }
+    bottom: 0;
+    height: 40px;
+    width: 40px; }
+    .peoples__portrait-icon.tv {
+      background-image: url(../img/sprite.png);
+      background-position: -40px 0px;
+      width: 40px;
+      height: 40px; }
+      @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+        .peoples__portrait-icon.tv {
+          background-image: url(../img/sprite@2x.png);
+          background-position: -80px 0px;
+          width: 80px;
+          height: 80px; } }
+    .peoples__portrait-icon.coffee {
+      background-image: url(../img/sprite.png);
+      background-position: 0px 0px;
+      width: 40px;
+      height: 40px; }
+      @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+        .peoples__portrait-icon.coffee {
+          background-image: url(../img/sprite@2x.png);
+          background-position: 0px 0px;
+          width: 80px;
+          height: 80px; } }
+    .peoples__portrait-icon.chemistry {
+      background-image: url(../img/sprite.png);
+      background-position: -121px 0px;
+      width: 41px;
+      height: 40px; }
+      @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+        .peoples__portrait-icon.chemistry {
+          background-image: url(../img/sprite@2x.png);
+          background-position: -242px 0px;
+          width: 82px;
+          height: 80px; } }
+    .peoples__portrait-icon.airplane {
+      background-image: url(../img/sprite.png);
+      background-position: -80px 0px;
+      width: 41px;
+      height: 40px; }
+      @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+        .peoples__portrait-icon.airplane {
+          background-image: url(../img/sprite@2x.png);
+          background-position: -160px 0px;
+          width: 82px;
+          height: 80px; } }
   .peoples__name {
     font-size: 14px;
     color: #333333;

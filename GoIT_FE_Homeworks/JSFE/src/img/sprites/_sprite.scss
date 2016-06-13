@@ -1,0 +1,129 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$sp-airplane-name: 'sp-airplane';
+$sp-airplane-x: 80px;
+$sp-airplane-y: 0px;
+$sp-airplane-offset-x: -80px;
+$sp-airplane-offset-y: 0px;
+$sp-airplane-width: 41px;
+$sp-airplane-height: 40px;
+$sp-airplane-total-width: 162px;
+$sp-airplane-total-height: 40px;
+$sp-airplane-image: '../img/sprite.png';
+$sp-airplane: (80px, 0px, -80px, 0px, 41px, 40px, 162px, 40px, '../img/sprite.png', 'sp-airplane', );
+$sp-chemistry-name: 'sp-chemistry';
+$sp-chemistry-x: 121px;
+$sp-chemistry-y: 0px;
+$sp-chemistry-offset-x: -121px;
+$sp-chemistry-offset-y: 0px;
+$sp-chemistry-width: 41px;
+$sp-chemistry-height: 40px;
+$sp-chemistry-total-width: 162px;
+$sp-chemistry-total-height: 40px;
+$sp-chemistry-image: '../img/sprite.png';
+$sp-chemistry: (121px, 0px, -121px, 0px, 41px, 40px, 162px, 40px, '../img/sprite.png', 'sp-chemistry', );
+$sp-coffee-name: 'sp-coffee';
+$sp-coffee-x: 0px;
+$sp-coffee-y: 0px;
+$sp-coffee-offset-x: 0px;
+$sp-coffee-offset-y: 0px;
+$sp-coffee-width: 40px;
+$sp-coffee-height: 40px;
+$sp-coffee-total-width: 162px;
+$sp-coffee-total-height: 40px;
+$sp-coffee-image: '../img/sprite.png';
+$sp-coffee: (0px, 0px, 0px, 0px, 40px, 40px, 162px, 40px, '../img/sprite.png', 'sp-coffee', );
+$sp-tv-name: 'sp-tv';
+$sp-tv-x: 40px;
+$sp-tv-y: 0px;
+$sp-tv-offset-x: -40px;
+$sp-tv-offset-y: 0px;
+$sp-tv-width: 40px;
+$sp-tv-height: 40px;
+$sp-tv-total-width: 162px;
+$sp-tv-total-height: 40px;
+$sp-tv-image: '../img/sprite.png';
+$sp-tv: (40px, 0px, -40px, 0px, 40px, 40px, 162px, 40px, '../img/sprite.png', 'sp-tv', );
+$spritesheet-width: 162px;
+$spritesheet-height: 40px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($sp-airplane, $sp-chemistry, $sp-coffee, $sp-tv, );
+$spritesheet: (162px, 40px, '../img/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

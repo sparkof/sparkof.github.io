@@ -37,6 +37,9 @@
     line-height: 120px;
     text-align: center;
     display: block;
+    @include respond-to(tab&desk) {
+      line-height: 310px;
+    }
   }
   &--width2 {
     @include respond-to(tab&desk) {
