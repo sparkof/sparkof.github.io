@@ -1,0 +1,41 @@
+.left-sidebar {
+  position: relative;
+  margin: 20px auto;
+  width: 450px;
+  min-height: 150px;
+  border: 1px solid $gray;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.75);
+
+}
+
+.left-panel {
+  position: absolute;
+  width: 12px;
+  left: -12px;
+  overflow: hidden;
+  height: 100%;
+  z-index: 1;
+  &::before {
+    cursor: pointer;
+    position: absolute;
+    content: '';
+    top: 24px;
+    left: -6px;
+    height: 100px;
+    width: 100px;
+    background-color: $black;
+    transform: rotate(45deg);
+    z-index: 0;
+  }
+  & span {
+    font-size: 13px;
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    margin-top: 64px;
+    margin-left: 0.5px;
+    color: #fff;
+    z-index: 2;
+  }
+}

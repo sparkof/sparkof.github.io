@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open sans', Arial, Tahoma, sans-serif; }
+
+ul {
+  list-style: none; }
+
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0; }
+
+.day {
+  margin: 0 auto;
+  padding-top: 10px;
+  height: 150px;
+  width: 150px;
+  border: 1px solid #a3a3a3;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.75);
+  position: relative;
+  cursor: default; }
+  .day__day-of-week {
+    display: block;
+    text-align: center;
+    text-transform: lowercase;
+    color: #4e4e4e; }
+  .day__date {
+    display: block;
+    text-align: center;
+    font-size: 80px;
+    line-height: 65px;
+    margin: 10px 0; }
+  .day__month {
+    display: block;
+    text-align: center;
+    text-transform: lowercase;
+    color: #4e4e4e; }
+  .day__bottom-panel {
+    position: absolute;
+    bottom: -1px;
+    left: 30%;
+    height: 12px;
+    background-color: #000;
+    text-align: center;
+    width: 40%;
+    cursor: pointer; }
+    .day__bottom-panel span {
+      display: block;
+      text-align: center;
+      margin-top: 2px;
+      color: #fff;
+      font-size: 8px;
+      line-height: 10px; }
+    .day__bottom-panel::before {
+      display: block;
+      content: '';
+      background-color: #000;
+      height: 17px;
+      width: 17px;
+      left: -8px;
+      bottom: -8px;
+      position: absolute;
+      transform: rotate(45deg);
+      border-radius: 1.5px; }
+    .day__bottom-panel::after {
+      display: block;
+      content: '';
+      background-color: #000;
+      height: 17px;
+      width: 17px;
+      right: -8px;
+      bottom: -8px;
+      position: absolute;
+      transform: rotate(45deg);
+      border-radius: 1.5px; }
+  .day__left-panel {
+    position: absolute;
+    left: -1px;
+    top: 30%;
+    width: 12px;
+    height: 40%;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer; }
+    .day__left-panel span {
+      display: block;
+      text-align: center;
+      color: #fff;
+      font-size: 8px;
+      margin-top: 26px; }
+    .day__left-panel::before {
+      display: block;
+      content: '';
+      background-color: #000;
+      height: 17px;
+      width: 17px;
+      left: -8px;
+      top: -8px;
+      position: absolute;
+      transform: rotate(45deg);
+      border-radius: 1.5px; }
+    .day__left-panel::after {
+      display: block;
+      content: '';
+      background-color: #000;
+      height: 17px;
+      width: 17px;
+      left: -8px;
+      bottom: -8px;
+      position: absolute;
+      transform: rotate(45deg);
+      border-radius: 1.5px; }
+
+.bottom-panel-wrapper {
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  position: absolute;
+  overflow: hidden; }
+
+.left-panel-wrapper {
+  left: -1px;
+  top: 0;
+  height: 100%;
+  width: 12px;
+  position: absolute;
+  overflow: hidden; }
+
+.left-sidebar {
+  position: relative;
+  margin: 20px auto;
+  width: 450px;
+  min-height: 150px;
+  border: 1px solid #a3a3a3;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.75); }
+
+.left-panel {
+  position: absolute;
+  width: 12px;
+  left: -12px;
+  overflow: hidden;
+  height: 100%;
+  z-index: 1; }
+  .left-panel::before {
+    cursor: pointer;
+    position: absolute;
+    content: '';
+    top: 24px;
+    left: -6px;
+    height: 100px;
+    width: 100px;
+    background-color: #000;
+    transform: rotate(45deg);
+    z-index: 0; }
+  .left-panel span {
+    font-size: 13px;
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    margin-top: 64px;
+    margin-left: 0.5px;
+    color: #fff;
+    z-index: 2; }
+
+.day-of-week {
+  margin-top: 5px;
+  cursor: default; }
+  .day-of-week__list {
+    width: 97%;
+    margin: 0 auto; }
+  .day-of-week__day {
+    color: #a3a3a3;
+    border: 1px solid #a6fff9;
+    border-radius: 2px;
+    float: left;
+    margin-right: 0.7%;
+    text-align: center;
+    text-transform: lowercase;
+    width: 16%;
+    background-color: #ddfffd; }
+  .day-of-week .weekend {
+    margin-right: 1px;
+    width: 8%;
+    border: 1px solid #ffbaba;
+    background-color: #ffdddd; }
+
+.current-week {
+  margin-top: 5px;
+  cursor: default; }
+  .current-week__list {
+    width: 97%;
+    margin: 0 auto; }
+  .current-week__day {
+    position: relative;
+    color: #a3a3a3;
+    border: 1px solid #a6fff9;
+    border-radius: 2px;
+    float: left;
+    height: 112px;
+    margin-right: 0.7%;
+    text-align: center;
+    text-transform: lowercase;
+    width: 16%;
+    background-color: #ddfffd; }
+    .current-week__day:hover {
+      background-color: #a6fff9;
+      border-color: #a6fff9; }
+    .current-week__day.today {
+      background-color: #bbffb4;
+      border-color: #70ff62; }
+      .current-week__day.today:hover {
+        background-color: #84ff78;
+        border-color: #84ff78; }
+  .current-week .weekend {
+    margin-right: 1px;
+    width: 8%;
+    border-color: #ffbaba;
+    background-color: #ffdddd; }
+    .current-week .weekend:hover {
+      background-color: #ffbaba;
+      border-color: #ffbaba; }
+  .current-week__date {
+    cursor: default;
+    position: absolute;
+    display: block;
+    font-size: 30px;
+    letter-spacing: -3px;
+    top: -3px;
+    right: 4px;
+    color: rgba(163, 163, 163, 0.35); }
+  .current-week__tasks-title {
+    display: block;
+    font-size: 12px;
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    text-align: center; }
+  .current-week__tasks-value {
+    display: block;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    text-align: center; }
+  .current-week__important-title {
+    display: block;
+    font-size: 12px;
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    text-align: center; }
+  .current-week__important-value {
+    display: block;
+    font-size: 20px;
+    color: #ff7d7d;
+    cursor: pointer;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    text-align: center; }
+  .current-week .empty::before {
+    display: block;
+    padding-top: 30px;
+    cursor: pointer;
+    font-size: 40px;
+    content: '+';
+    height: 100%;
+    width: 100%;
+    opacity: 0; }
+  .current-week .empty:hover::before {
+    opacity: 1; }
+
+.current-week {
+  display: none; }
+
+.month {
+  margin-top: 5px;
+  cursor: default; }
+  .month__week {
+    width: 97%;
+    margin: 3px auto 0; }
+  .month__day {
+    position: relative;
+    color: #a3a3a3;
+    border: 1px solid #a6fff9;
+    border-radius: 2px;
+    float: left;
+    height: 20px;
+    margin-right: 0.7%;
+    text-align: center;
+    text-transform: lowercase;
+    width: 16%;
+    background-color: #ddfffd; }
+    .month__day:hover {
+      background-color: #a6fff9;
+      border-color: #a6fff9; }
+    .month__day.today {
+      background-color: #bbffb4;
+      border-color: #70ff62; }
+      .month__day.today:hover {
+        background-color: #84ff78;
+        border-color: #84ff78; }
+  .month .weekend {
+    margin-right: 1px;
+    width: 8%;
+    border-color: #ffbaba;
+    background-color: #ffdddd; }
+    .month .weekend:hover {
+      background-color: #ffbaba;
+      border-color: #ffbaba; }
+  .month .other-month {
+    background-color: #dedede; }
+    .month .other-month.weekend:hover {
+      background-color: #ffbaba;
+      border-color: #ffbaba; }
+    .month .other-month:hover {
+      background-color: #a6fff9;
+      border-color: #a6fff9; }
+
+body {
+  background-color: #eee; }
