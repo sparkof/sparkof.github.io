@@ -17,7 +17,10 @@ $other-month :rgb(222, 222, 222);
 @import "left-sidebar";
 @import "week";
 @import "month";
+@import "todo";
 
 body {
   background-color: #eee;
 }
+
+.wrapper {position: relative;}

@@ -1,13 +1,15 @@
 .day {
-  margin: 0 auto;
+  margin: 20px 0 0 80%;
   padding-top: 10px;
   height: 150px;
   width: 150px;
   border: 1px solid $gray;
   border-radius: 10px;
   box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.75);
+  background-color: #fff;
   position: relative;
   cursor: default;
+  z-index: 1;
 
   &__day-of-week {
     display: block;
@@ -17,6 +19,7 @@
   }
 
   &__date {
+    cursor: pointer;
     display: block;
     text-align: center;
     font-size: 80px;
@@ -40,7 +43,7 @@
     text-align: center;
     width: 40%;
     cursor: pointer;
-    & span {
+    span {
       display: block;
       text-align: center;
       margin-top: 2px;
@@ -82,7 +85,7 @@
     background-color: $black;
     text-align: center;
     cursor: pointer;
-    & span {
+    span {
       display: block;
       text-align: center;
       color: #fff;

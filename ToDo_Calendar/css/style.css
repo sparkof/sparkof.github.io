@@ -15,21 +15,24 @@ ul {
   height: 0; }
 
 .day {
-  margin: 0 auto;
+  margin: 20px 0 0 80%;
   padding-top: 10px;
   height: 150px;
   width: 150px;
   border: 1px solid #a3a3a3;
   border-radius: 10px;
   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.75);
+  background-color: #fff;
   position: relative;
-  cursor: default; }
+  cursor: default;
+  z-index: 1; }
   .day__day-of-week {
     display: block;
     text-align: center;
     text-transform: lowercase;
     color: #4e4e4e; }
   .day__date {
+    cursor: pointer;
     display: block;
     text-align: center;
     font-size: 80px;
@@ -133,13 +136,17 @@ ul {
   overflow: hidden; }
 
 .left-sidebar {
-  position: relative;
-  margin: 20px auto;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -452px;
   width: 450px;
   min-height: 150px;
   border: 1px solid #a3a3a3;
   border-radius: 10px;
-  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.75); }
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+  background-color: #fff;
+  z-index: 0; }
 
 .left-panel {
   position: absolute;
@@ -168,6 +175,69 @@ ul {
     margin-left: 0.5px;
     color: #fff;
     z-index: 2; }
+
+.bottom-swipe-panel {
+  display: none;
+  height: 12px;
+  width: 100%;
+  position: absolute;
+  bottom: -12px;
+  overflow: hidden;
+  text-align: center; }
+  .bottom-swipe-panel::before {
+    content: '';
+    height: 100px;
+    width: 100px;
+    background-color: #000;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -50px;
+    left: 38.51%; }
+  .bottom-swipe-panel span {
+    cursor: default;
+    font-size: 11px;
+    color: #fff;
+    z-index: 3;
+    position: relative;
+    top: -4px; }
+  .bottom-swipe-panel__prev {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -20px;
+    left: 38%;
+    z-index: 1; }
+    .bottom-swipe-panel__prev::before {
+      content: '';
+      height: 40px;
+      width: 40px;
+      background-color: #000;
+      position: absolute;
+      top: -10px;
+      left: 24%;
+      z-index: 2; }
+  .bottom-swipe-panel__next {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -20px;
+    right: 38%;
+    z-index: 1; }
+    .bottom-swipe-panel__next::before {
+      content: '';
+      height: 40px;
+      width: 40px;
+      background-color: #000;
+      position: absolute;
+      top: 0px;
+      right: 24%;
+      z-index: 2; }
 
 .day-of-week {
   margin-top: 5px;
@@ -278,10 +348,8 @@ ul {
   .current-week .empty:hover::before {
     opacity: 1; }
 
-.current-week {
-  display: none; }
-
 .month {
+  display: none;
   margin-top: 5px;
   cursor: default; }
   .month__week {
@@ -316,6 +384,12 @@ ul {
     .month .weekend:hover {
       background-color: #ffbaba;
       border-color: #ffbaba; }
+    .month .weekend.today {
+      background-color: #bbffb4;
+      border-color: #70ff62; }
+      .month .weekend.today:hover {
+        background-color: #84ff78;
+        border-color: #84ff78; }
   .month .other-month {
     background-color: #dedede; }
     .month .other-month.weekend:hover {
@@ -327,3 +401,6 @@ ul {
 
 body {
   background-color: #eee; }
+
+.wrapper {
+  position: relative; }
