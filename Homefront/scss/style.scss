@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+.clearfix::after {
+  content: '.';
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  display: block;
+}
+
+$gray: #d0d0d0;
+$dark-gray: #4e4e4e;
+$black: #000;
+$blue: #e6faf9;
+$blue-border: #a6fff9;
+$blue-hover: #a6fff9;
+$blue-text: #729d9b;
+$red: #ffdddd;
+$red-border: #ffbaba;
+$red-hover: #ffbaba;
+$red-text: #ff7c7c;
+$green: #bbffb4;
+$green-border: #70ff62;
+$green-hover: #84ff78;
+$green-text: #6d9369;
+$other-month :rgb(222, 222, 222);
+
+@import "calendar";
+@import "toDoList";
+@import "modal";
+@import "links";
+
+body {
+  background-color: #eee;
+}

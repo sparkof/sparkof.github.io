@@ -1,0 +1,71 @@
+.toDoList {
+  width: 29%;
+  float: right;
+  min-height: 469px;
+  position: relative;
+  .date-name {
+    text-align: center;
+  }
+  .head {
+    margin-top: 10px;
+  }
+  .addTask {
+    border: 1px solid $red-hover;
+    border-radius: 100%;
+    color: $red-text;
+    cursor: pointer;
+    font-size: 200%;
+    height: 35px;
+    position: absolute;
+    bottom: 2px;
+    right: 30px;
+    text-align: center;
+    width: 35px;
+    &:hover {
+      box-shadow: 1px 1px 1px 1px;
+    }
+  }
+  .complete {
+    height: 16px;
+    width: 16px;
+    // background-color: green;
+    float: left;
+    background-image: url(../img/accept.png);
+  }
+  .edit {
+    height: 16px;
+    width: 16px;
+    // background-color: yellow;
+    margin-left: 20px;
+    float: left;
+    background-image: url(../img/edit.png);
+  }
+  .remove {
+    height: 16px;
+    width: 16px;
+    // background-color: red;
+    float: left;
+    margin-left: 20px;
+    background-image: url(../img/remove.png);
+  }
+
+}
+
+.taskList {
+  margin-top: 10px;
+  width: 98%;
+  float: right;
+  color: #00518c;
+  li {
+    margin-bottom: 20px;
+  }
+  .common {
+
+  }
+  .important {
+    color: $red-text;
+  }
+  .completed {
+    text-decoration: line-through;
+  }
+}

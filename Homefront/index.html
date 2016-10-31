@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Державна фіскальна служба</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+
+  </header>
+  <div class="clearfix">
+    <div class="calendar">
+      <div class="month-nav clearfix">
+        <div class="nav-prev-button"></div>
+        <div class="monthname"></div>
+        <div class="nav-next-button"></div>
+      </div>
+
+      <div class="gridcontainer">
+        <table class="daynames">
+          <tbody>
+            <tr>
+              <th>Пн</th>
+              <th>Вт</th>
+              <th>Ср</th>
+              <th>Чт</th>
+              <th>Пт</th>
+              <th>Сб</th>
+              <th>Вс</th>
+            </tr>
+          </tbody>
+        </table>
+        <div class="weekgrid">
+          <script type="text/template" id="weeks">
+            <% for (var week = 0; week < 6 ; week++) { %>
+              <tr class="week">
+                <% for (var wday = 1; wday <=7; wday++) { %>
+                  <td class="<%= day[wday + week * 7].currentClass %>" data-day="<%= day[wday + week * 7].fullDate %>">
+                    <div class="daydiv">
+                      <span class="date"><%= day[wday + week * 7].fullDate.getDate() %></span>
+                      <div class="tasks">
+                        <% if (day[wday + week * 7].important() > 0) { %>
+                        <span class="task-important-uncompleted">Важных: <span><%= day[wday + week * 7].important() %></span></span><br>
+                        <% }; %>
+                        <% if (day[wday + week * 7].common() > 0) { %>
+                        <span class="task-common-uncompleted">Задач: <span><%= day[wday + week * 7].common() %></span></span><br>
+                        <% }; %>
+                        <% if (day[wday + week * 7].completed() > 0) { %>
+                        <span class="task-completed">Выполнено:<span><%= day[wday + week * 7].completed() %></span></span>
+                        <% }; %>
+                      </div>
+                    </div>
+                  </td>
+                  <% }; %>
+                </tr>
+                <% }; %>
+              </script>
+          <table>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="toDoList">
+      <div class="date-name"></div>
+      <div class="head">Список задач на день:</div>
+        <script type="text/template" id="taskList">
+          <% for (var i = 0; i < dateTasks.length; i++) { %>
+            <% var currentClass = ""; %>
+            <% if (dateTasks[i].important) { %>
+              <% currentClass += 'important' } else { currentClass += 'common' }; %>
+            <% if (dateTasks[i].completed) currentClass += ' completed'; %>
+            <li class="<%= currentClass %>" data-id="<%= dateTasks[i].id %>"><%= dateTasks[i].text %>
+              <div class="buttons clearfix">
+                <div class="complete"></div>
+                <div class="edit"></div>
+                <div class="remove"></div>
+              </div>
+            </li>
+          <% }; %>
+        </script>
+
+      <ol class="taskList">
+
+      </ol>
+
+      <div class="addTask">+</div>
+    </div>
+  </div>
+
+  <script type="text/template" id=new-task>
+    <div class="task-window">
+      <div class="overlay"></div>
+      <div class="modal">
+        <div class="dayName"></div>
+        <form class='taskForm' action="#">
+          <textarea id=task-text autofocus placeholder="Текст задачи"></textarea>
+          <input id=important-checkbox type="checkbox" name="option 1" value="important">
+          <label for="important-checkbox">Важное</label>
+          <input id=completed-checkbox type="checkbox" name="option 2" value="completed">
+          <label for="completed-checkbox">Выполненое</label>
+        </form>
+        <button id=ok-button>OK</button>
+        <button id=cancel-button>Отмена</button>
+      </div>
+    </div>
+  </script>
+
+  <nav>
+    <ul>
+      <li><a href="http://taxblock.sts.local" target="_blank">
+        <span>
+          <img src="img/block.png" alt="">
+        </span>
+        <strong>Налоговый блок</strong>
+      </a></li>
+
+      <li><a href="http://10.80.42.232/insp1/" target="_blank">
+        <span>
+          <img src="img/archive.png" alt="">
+        </span>
+        <strong>Архив Эл.Отч.</strong>
+      </a></li>
+
+      <li><a href="http://dms.sts.local/" target="_blank">
+        <span>
+          <img src="img/lists.png" alt="">
+        </span>
+        <strong>УДО</strong>
+      </a></li>
+
+      <li><a href="http://10.80.42.230/dogovor" target="_blank">
+        <span>
+          <img src="img/dogovor.png" alt="">
+        </span>
+        <strong>Обработка договоров</strong>
+      </a></li>
+
+      <li><a href="http://10.80.42.64:9705/analytics/saw.dll?Dashboard" target="_blank">
+        <span>
+          <img src="img/stop.png" alt="">
+        </span>
+        <strong>Выбор из системы сопоставления</strong>
+      </a></li>
+
+      <li><a href="http://10.5.83.193/" target="_blank">
+        <span>
+          <img src="img/arrow.png" alt="">
+        </span>
+        <strong>АС Аудит 2.19</strong>
+      </a></li>
+
+      <li><a href="http://10.80.130.130/" target="_blank">
+        <span>
+          <img src="img/eye.png" alt="">
+        </span>
+        <strong>ЗІР</strong>
+      </a></li>
+
+      <li><a href="http://10.80.40.204/phpbb2" target="_blank">
+        <span>
+          <img src="img/forum.png" alt="">
+        </span>
+        <strong>Форум</strong>
+      </a></li>
+
+      <li><a href="https://10.80.31.37/" target="_blank">
+        <span>
+          <img src="img/mail.png" alt="">
+        </span>
+        <strong>Почта</strong>
+      </a></li>
+    </ul>
+  </nav>
+
+  <script src="js/jquery-3.0.0.min.js" charset="utf-8"></script>
+  <script src="js/lodash.js" charset="utf-8"></script>
+  <script src="js/script.js" charset="utf-8"></script>
+  <script src="js/todolist.js" charset="utf-8"></script>
+</body>
+</html>

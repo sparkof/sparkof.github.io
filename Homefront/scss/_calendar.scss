@@ -1,0 +1,114 @@
+.nav-prev-button, .nav-next-button {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  float: left;
+  width: 33%;
+  height: 20px;
+}
+
+.nav-prev-button::before {
+  content: "";
+  position: absolute;
+  background-color: #4e4e4e;
+  height: 100px;
+  width: 100px;
+  right: 0;
+  top: -40px;
+  transform: rotate(45deg);
+}
+
+.nav-next-button::before {
+  content: "";
+  position: absolute;
+  background-color: #4e4e4e;
+  height: 100px;
+  width: 100px;
+  left: 0;
+  top: -40px;
+  transform: rotate(45deg);
+}
+.gridcontainer {
+  margin-top: 2px;
+}
+
+.monthname {
+  float: left;
+  width: 34%;
+  padding-bottom: 1px;
+  text-align: center;
+}
+
+.calendar {
+  float: left;
+  width: 70%;
+  table {
+    width: 100%;
+    // border: 1px solid $blue-border;
+    border-collapse: collapse;
+    margin-top: -1px;
+    th, td {
+      position: relative;
+      border: 1px solid $blue-border;
+      // background-color: $blue;
+      color: $blue-text;
+      width: 14.5%;
+    }
+    th:nth-child(6), th:nth-child(7) {
+      background-color: $red;
+      border: 1px solid $red-border;
+      color: $red-text;
+      width: 13.75%;
+    }
+  }
+}
+
+.day {
+  height: 70px;
+  // background-color: $blue;
+  &:hover {
+    background-color: $blue-hover;
+  }
+  &.selected {
+    background-color: $blue-hover;
+    box-shadow: 1px 1px 1px 1px;
+  }
+  .date {
+    color: $blue-text;
+  }
+  &.weekend {
+    width: 13.75%;
+    // background-color: $red;
+    border: 1px solid $red-border;
+    &:hover {
+      background-color: $red-hover;
+    }
+    &.selected {
+      background-color: $red-hover;
+    }
+    .date {
+      color: $red-text;
+    }
+  }
+  &.other-month {
+    background-color: $gray;
+  }
+  &.today {
+    background-color: $green;
+    border: 1px solid $green-border;
+    .date {
+      color: $green-text;
+    }
+  }
+  .daydiv {
+    height: 100%;
+  }
+}
+
+.date {
+  cursor: default;
+  position: absolute;
+  top: 3px;
+  right: 7px;
+  font-size: 130%;
+}
