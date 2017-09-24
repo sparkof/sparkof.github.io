@@ -4,6 +4,28 @@
   clear:both;
 }
 
+$small: 320px;
+$medium: 768px;
+$large: 940px;
+
+@mixin respond-to($media) {
+  @if $media == retina {
+    @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-moz-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min-device-pixel-ratio: 1.5) { @content; }
+  }
+  @else if $media == tablet {
+    @media (min-device-width: $small + 160) and (max-device-width: $medium) { @content; }
+  }
+  @else if $media == desktop {
+    @media (min-device-width: $medium + 1) { @content; }
+  }
+  @else if $media == tab&desk {
+    @media (min-device-width: $small + 160) { @content; }
+  }
+}
+
 @font-face {
     font-family: "CenturyGothicRegular";
     src: url("../fonts/CenturyGothicRegular/CenturyGothicRegular.eot");
