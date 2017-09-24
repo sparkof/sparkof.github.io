@@ -20,6 +20,10 @@
     max-width: 90%;
     margin: 0 auto;
     height: 60px; }
+    @media (min-device-width: 320px) and (max-device-width: 768px) {
+      .portfolio_nav {
+        height: 80px;
+        max-width: 100%; } }
     .portfolio_navButtonContainer {
       margin-top: 20px;
       text-transform: uppercase;
@@ -27,6 +31,10 @@
       float: left;
       width: 50%;
       text-align: center; }
+      @media (min-device-width: 320px) and (max-device-width: 768px) {
+        .portfolio_navButtonContainer {
+          float: none;
+          width: 100%; } }
       .portfolio_navButtonContainer .active {
         text-decoration: underline; }
   .portfolio_mainContainer {
@@ -41,6 +49,12 @@
     padding-bottom: 90000px;
     margin-bottom: -90000px;
     margin-top: 100px; }
+    @media (min-device-width: 320px) and (max-device-width: 768px) {
+      .portfolio_mainTextContainer {
+        width: 100%;
+        float: none;
+        padding-bottom: 0px;
+        margin-bottom: 50px; } }
     .portfolio_mainTextContainer .mainText {
       margin-left: 60px;
       font-size: 20px;
@@ -65,6 +79,13 @@
     margin-bottom: -90000px;
     width: 70%;
     float: left; }
+    @media (min-device-width: 320px) and (max-device-width: 768px) {
+      .portfolio_publicDesign {
+        width: 100%;
+        float: none;
+        padding-bottom: 0px;
+        margin-bottom: 40px;
+        margin-left: 40px; } }
     .portfolio_publicDesignList {
       list-style-type: none; }
     .portfolio_publicDesignItem {
@@ -93,6 +114,13 @@
           display: inline; }
   .portfolio_houseDesign {
     display: none; }
+    @media (min-device-width: 320px) and (max-device-width: 768px) {
+      .portfolio_houseDesign {
+        width: 100%;
+        float: none;
+        padding-bottom: 0px;
+        margin-bottom: 40px;
+        margin-left: 40px; } }
     .portfolio_houseDesignList {
       list-style-type: none; }
     .portfolio_houseDesignItem {

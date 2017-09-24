@@ -16,7 +16,7 @@ $large: 940px;
     only screen and (min-device-pixel-ratio: 1.5) { @content; }
   }
   @else if $media == tablet {
-    @media (min-device-width: $small + 160) and (max-device-width: $medium) { @content; }
+    @media (min-device-width: $small) and (max-device-width: $medium) { @content; }
   }
   @else if $media == desktop {
     @media (min-device-width: $medium + 1) { @content; }
@@ -49,6 +49,10 @@ $large: 940px;
       margin: 0 auto;
       // background-color: yellow;
       height: 60px;
+      @include respond-to(tablet) {
+        height: 80px;
+        max-width: 100%;
+      };
         &ButtonContainer {
           margin-top: 20px;
           text-transform: uppercase;
@@ -56,7 +60,10 @@ $large: 940px;
           float: left;
           width: 50%;
           text-align: center;
-          // max-width: 550px;
+          @include respond-to(tablet) {
+            float: none;
+            width: 100%;
+          };
             & .active {
               text-decoration: underline;
             }
@@ -77,6 +84,12 @@ $large: 940px;
       padding-bottom: 90000px;
       margin-bottom: -90000px;
       margin-top: 100px;
+      @include respond-to(tablet) {
+        width: 100%;
+        float: none;
+        padding-bottom: 0px;
+        margin-bottom: 50px;
+      };
       & .mainText {
         margin-left: 60px;
         font-size: 20px;
@@ -108,6 +121,13 @@ $large: 940px;
       margin-bottom: -90000px;
       width: 70%;
       float: left;
+      @include respond-to(tablet) {
+        width: 100%;
+        float: none;
+        padding-bottom: 0px;
+        margin-bottom: 40px;
+        margin-left: 40px;
+      };
       &List {
         list-style-type: none;
       }
@@ -147,6 +167,13 @@ $large: 940px;
 
     &_houseDesign {
       display: none;
+      @include respond-to(tablet) {
+        width: 100%;
+        float: none;
+        padding-bottom: 0px;
+        margin-bottom: 40px;
+        margin-left: 40px;
+      };
       &List {
         list-style-type: none;
       }
