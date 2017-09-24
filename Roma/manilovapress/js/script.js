@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
 			$(".portfolio_navButton").removeClass("active");
 			$(this).addClass("active");
 
-			var design = $(this).attr("data");
+			var design = $(this).attr("data-name");
 			if (design==="public") {
 				$(".portfolio_houseDesign").hide();
 				$(".portfolio_publicDesign").show();
