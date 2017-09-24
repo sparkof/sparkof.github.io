@@ -2,3 +2,120 @@
   content: "";
   display: block;
   clear: both; }
+
+@font-face {
+  font-family: "CenturyGothicRegular";
+  src: url("../fonts/CenturyGothicRegular/CenturyGothicRegular.eot");
+  src: url("../fonts/CenturyGothicRegular/CenturyGothicRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/CenturyGothicRegular/CenturyGothicRegular.woff") format("woff"), url("../fonts/CenturyGothicRegular/CenturyGothicRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+.portfolio {
+  margin: 0 auto;
+  font-family: CenturyGothicRegular, sans-serif; }
+  .portfolio * {
+    margin: 0;
+    padding: 0; }
+  .portfolio_nav {
+    max-width: 90%;
+    margin: 0 auto;
+    height: 60px; }
+    .portfolio_navButtonContainer {
+      margin-top: 20px;
+      text-transform: uppercase;
+      cursor: pointer;
+      float: left;
+      width: 50%;
+      text-align: center; }
+      .portfolio_navButtonContainer .active {
+        text-decoration: underline; }
+  .portfolio_mainContainer {
+    padding-bottom: 40px;
+    margin: 0 auto;
+    background-color: #1d2f3b;
+    overflow: hidden; }
+  .portfolio_mainTextContainer {
+    color: #fff;
+    float: left;
+    width: 30%;
+    padding-bottom: 90000px;
+    margin-bottom: -90000px;
+    margin-top: 100px; }
+    .portfolio_mainTextContainer .mainText {
+      margin-left: 60px;
+      font-size: 20px;
+      line-height: 35px; }
+  .portfolio_sampleText {
+    background-color: #1d2f3b;
+    position: absolute;
+    top: 15px;
+    left: -65px;
+    font-size: 32px; }
+    .portfolio_sampleText .sampleText1 {
+      color: #8dd2e1; }
+    .portfolio_sampleTextLogo {
+      position: relative;
+      margin: 50px 50px 50px 115px;
+      width: 180px;
+      height: 120px;
+      border: 2px solid #568090; }
+  .portfolio_publicDesign {
+    display: block;
+    padding-bottom: 90000px;
+    margin-bottom: -90000px;
+    width: 70%;
+    float: left; }
+    .portfolio_publicDesignList {
+      list-style-type: none; }
+    .portfolio_publicDesignItem {
+      margin-top: 40px;
+      margin-left: 80px;
+      float: left;
+      position: relative; }
+      .portfolio_publicDesignItem .galleryItemLayout {
+        display: none;
+        font-size: 30px; }
+        .portfolio_publicDesignItem .galleryItemLayout span {
+          text-align: center;
+          margin: auto; }
+      .portfolio_publicDesignItem:hover .galleryItemLayout {
+        cursor: pointer;
+        height: 280px;
+        width: 280px;
+        display: flex;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: rgba(0, 186, 255, 0.51); }
+      .portfolio_publicDesignItem a {
+        display: none; }
+        .portfolio_publicDesignItem a:first-of-type {
+          display: inline; }
+  .portfolio_houseDesign {
+    display: none; }
+    .portfolio_houseDesignList {
+      list-style-type: none; }
+    .portfolio_houseDesignItem {
+      float: left;
+      position: relative;
+      margin-top: 40px;
+      margin-left: 40px; }
+      .portfolio_houseDesignItem .galleryItemLayout {
+        display: none;
+        font-size: 20px; }
+        .portfolio_houseDesignItem .galleryItemLayout span {
+          text-align: center;
+          margin: auto; }
+      .portfolio_houseDesignItem:hover .galleryItemLayout {
+        cursor: pointer;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: rgba(0, 186, 255, 0.51); }
+      .portfolio_houseDesignItem a {
+        display: none; }
+        .portfolio_houseDesignItem a:first-of-type {
+          display: inline; }

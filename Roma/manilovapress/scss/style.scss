@@ -3,3 +3,162 @@
   display: block;
   clear:both;
 }
+
+@font-face {
+    font-family: "CenturyGothicRegular";
+    src: url("../fonts/CenturyGothicRegular/CenturyGothicRegular.eot");
+    src: url("../fonts/CenturyGothicRegular/CenturyGothicRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/CenturyGothicRegular/CenturyGothicRegular.woff") format("woff"),
+    url("../fonts/CenturyGothicRegular/CenturyGothicRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.portfolio {
+  & * {
+    margin: 0;
+    padding: 0;
+  }
+  margin: 0 auto;
+  font-family: CenturyGothicRegular, sans-serif;
+
+    &_nav {
+      max-width: 90%;
+      margin: 0 auto;
+      // background-color: yellow;
+      height: 60px;
+        &ButtonContainer {
+          margin-top: 20px;
+          text-transform: uppercase;
+          cursor: pointer;
+          float: left;
+          width: 50%;
+          text-align: center;
+          // max-width: 550px;
+            & .active {
+              text-decoration: underline;
+            }
+        }
+    }
+
+    &_mainContainer {
+      // min-height: 800px;
+      padding-bottom: 40px;
+      margin: 0 auto;
+      background-color: #1d2f3b;
+      overflow: hidden;
+    }
+    &_mainTextContainer {
+      color: #fff;
+      float: left;
+      width: 30%;
+      padding-bottom: 90000px;
+      margin-bottom: -90000px;
+      margin-top: 100px;
+      & .mainText {
+        margin-left: 60px;
+        font-size: 20px;
+        line-height: 35px;
+      }
+    }
+    &_sampleText {
+      background-color: #1d2f3b;
+      position: absolute;
+      top: 15px;
+      left: -65px;
+      font-size: 32px;
+
+      & .sampleText1 {
+        color: #8dd2e1;
+      }
+      &Logo {
+        position: relative;
+        margin: 50px 50px 50px 115px;
+        width: 180px;
+        height: 120px;
+        border: 2px solid #568090;
+      }
+    }
+
+    &_publicDesign {
+      display: block;
+      padding-bottom: 90000px;
+      margin-bottom: -90000px;
+      width: 70%;
+      float: left;
+      &List {
+        list-style-type: none;
+      }
+      &Item {
+        margin-top: 40px;
+        margin-left: 80px;
+        float: left;
+        position: relative;
+        & .galleryItemLayout {
+          display: none;
+          font-size: 30px;
+          & span {
+            text-align: center;
+            margin: auto;
+          }
+        }
+        &:hover {
+          & .galleryItemLayout {
+            cursor: pointer;
+            height: 280px;
+            width: 280px;
+            display: flex;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(0, 186, 255, 0.51);
+          }
+        }
+        & a {
+          display: none;
+          &:first-of-type {
+            display: inline;
+          }
+        }
+      }
+    }
+
+    &_houseDesign {
+      display: none;
+      &List {
+        list-style-type: none;
+      }
+      &Item {
+        float: left;
+        position: relative;
+        margin-top: 40px;
+        margin-left: 40px;
+        & .galleryItemLayout {
+          display: none;
+          font-size: 20px;
+          & span {
+            text-align: center;
+            margin: auto;
+          }
+        }
+        &:hover {
+          & .galleryItemLayout {
+            cursor: pointer;
+            height: 200px;
+            width: 200px;
+            display: flex;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(0, 186, 255, 0.51);
+          }
+        }
+        & a {
+          display: none;
+          &:first-of-type {
+            display: inline;
+          }
+        }
+      }
+    }
+}
