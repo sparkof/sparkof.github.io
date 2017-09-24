@@ -1,5 +1,7 @@
 jQuery(document).ready(function($) {
-		$(".fancybox").fancybox();
+	$("[data-fancybox]").fancybox({
+	// Options will go here
+});
 
 
 // navigation (show public or house block)
