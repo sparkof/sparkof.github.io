@@ -1,5 +1,6 @@
 .clearfix::after {
-  content: "";
+  content: ".";
+  visibility: hidden;
   display: block;
   clear:both;
 }
@@ -117,10 +118,8 @@ $large: 940px;
 
     &_publicDesign {
       display: block;
-      padding-bottom: 90000px;
-      margin-bottom: -90000px;
       width: 70%;
-      float: left;
+      float: right;
       @include respond-to(tablet) {
         width: 100%;
         float: none;
@@ -135,8 +134,9 @@ $large: 940px;
         float: left;
         position: relative;
         @include respond-to(tablet) {
-          width: 320px;
+          display: block;
           float: none;
+          width: 320px;
           margin: 20px auto;
         };
         & .galleryItemLayout {
@@ -170,6 +170,8 @@ $large: 940px;
 
     &_houseDesign {
       display: none;
+      float: right;
+      width: 70%;
       @include respond-to(tablet) {
         width: 100%;
         float: none;

@@ -1,5 +1,6 @@
 .clearfix::after {
-  content: "";
+  content: ".";
+  visibility: hidden;
   display: block;
   clear: both; }
 
@@ -75,10 +76,8 @@
       border: 2px solid #568090; }
   .portfolio_publicDesign {
     display: block;
-    padding-bottom: 90000px;
-    margin-bottom: -90000px;
     width: 70%;
-    float: left; }
+    float: right; }
     @media (min-device-width: 320px) and (max-device-width: 768px) {
       .portfolio_publicDesign {
         width: 100%;
@@ -93,8 +92,9 @@
       position: relative; }
       @media (min-device-width: 320px) and (max-device-width: 768px) {
         .portfolio_publicDesignItem {
-          width: 320px;
+          display: block;
           float: none;
+          width: 320px;
           margin: 20px auto; } }
       .portfolio_publicDesignItem .galleryItemLayout {
         display: none;
@@ -116,7 +116,9 @@
         .portfolio_publicDesignItem a:first-of-type {
           display: inline; }
   .portfolio_houseDesign {
-    display: none; }
+    display: none;
+    float: right;
+    width: 70%; }
     @media (min-device-width: 320px) and (max-device-width: 768px) {
       .portfolio_houseDesign {
         width: 100%;
